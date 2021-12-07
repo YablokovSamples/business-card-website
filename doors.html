@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="«Дверцог» - это быстроразвивающееся предприятие по производству межкомнатных дверей для квартир и офиса, загородных особняков и респектабельных коттеджей, гостиниц и ресторанов" />
+	<meta name="keywords" content="дверцог, &quot;дверцог&quot;, ателье благородных дверей, ателье благородных дверей дверцог, ателье благородных дверей &quot;дверцог&quot;" />
+
+	<title>Ателье благородных дверей &quot;Дверцог&quot;</title>
+
+	<!-- ico -->
+	<link rel="shortcut icon" href="css/images/general/icon/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="css/images/general/icon/favicon.ico" />
+
+	<!-- css-base -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/table.css" />
+	<link rel="stylesheet" type="text/css" href="css/bubble.css" />
+
+	<!-- js-base -->
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- Подключаем библиотеку jQuery Cycle Plugin -->
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+		function()
+		{
+			$('#gallery').cycle(
+			{ 
+				fx: 'custom', 
+				cssBefore:
+				{
+					left: 115,  
+					top: 115,  
+					width: 0,  
+					height: 0,  
+					opacity: 1, 
+					display: 'block' 
+				}, 
+				animOut:
+				{
+					opacity: 0  
+				}, 
+				animIn:
+				{
+					left: 0,  
+					top: 0,
+					height: "356px",   
+					width: "256px"
+				}, 
+				cssAfter:
+				{
+					zIndex: 0 
+				}, 
+				delay: -3000
+			});
+			
+			$('#s1').before('#nav1').cycle(
+			{
+				fx: 'fade', 
+				speed: 'fast', 
+				startingSlide: 3, // zero-based 
+				timeout: 3000, 
+				pager: '#nav', 
+				delay: -2000 
+			});
+			
+			$('#s3').cycle(
+			{
+				fx:     'turnDown', 
+				speed: 300, 
+				timeout: 3000, 
+				next: '#s3', 
+				pause: 1 
+			});
+			
+			$('#slideshow').cycle(
+			{
+				fx: 'shuffle',
+				shuffle:
+				{ 
+					top:  70,
+					left:  250
+				},
+				next: '#slideshow',
+				pause: 1
+			});	
+		});
+	</script>
+	<!--/Подключаем библиотеку jQuery Cycle Plugin -->
+
+   <!-- Подключаем библиотеку HighSlide -->
+	<script type="text/javascript" src="highslide/highslide-with-gallery.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+	<![endif]-->
+	<script type="text/javascript">
+		hs.graphicsDir = 'highslide/graphics/';
+		hs.align = 'center';
+		hs.transitions = ['expand', 'crossfade'];
+		hs.outlineType = 'rounded-dark';
+		//hs.fadeInOut = true;
+		hs.outlineType = 'glossy-dark';
+		hs.wrapperClassName = 'dark';
+		hs.numberPosition = 'caption';
+		hs.dimmingOpacity = 0.75;
+
+		// Add the controlbar
+		if (hs.addSlideshow) hs.addSlideshow(
+		{
+			interval: 5000,
+			repeat: false,
+			useControls: true,
+			fixedControls: 'fit',
+			overlayOptions:
+			{
+				opacity: .75,
+				position: 'bottom center',
+				hideOnMouseOut: true
+			}
+		});
+	</script>
+	<style type="text/css">
+		.description
+		{
+			color: grey;
+			font-family: Pompadur, 'Comic Sans MS', cursive;
+			font-style: normal;
+			text-align:center;
+		}
+		.highslide img
+		{
+			border-radius: 60px 6px 20px 6px;
+			
+			-webkit-border-top-right-radius: 6px 3px;
+			-moz-border-top-right-radius: 6px 3px;
+			border-top-right-radius: 6px 3px;
+			
+			-webkit-border-bottom-left-radius: 6px 3px;
+			-moz-border-bottom-left-radius: 6px 3px;
+			border-bottom-left-radius: 6px 3px;
+			cursor: url(/highslide/graphics/zoomin.cur), pointer !important;
+		}
+	</style>
+	<!-- /Подключаем библиотеку HighSlide -->
+    
+   <!-- Плавная прокрутка -->
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		// hide #back-top first
+		$("#back-top").hide();
+		
+		// fade in #back-top
+		$(function ()
+		{
+			$(window).scroll(function()
+			{
+				if ($(this).scrollTop() >100)
+				{
+					$('#back-top').fadeIn();
+				}
+				else
+				{
+					$('#back-top').fadeOut();
+				}
+			});
+		
+			// scroll body to 0px on click
+			$('#back-top a').click(function()
+			{
+				$('body,html').animate(
+				{
+					scrollTop: 0
+				}, 800);
+				
+				return false;
+			});
+		});
+	});
+	
+	$(document).ready(function()
+	{
+		$( 'a[href^=#list]' ).click(function ()
+		{
+			var id = $( this ).attr( 'href' ).match( /#.+$/ )[0].substr(1);
+			var offsetTop = $("a[name='"+ id + "']").offset().top;
+			$('body,html').animate({scrollTop:offsetTop}, 500);
+			
+			return false;
+		});
+	});
+	</script>
+	<!--/Плавная прокрутка -->
+
+	<!-- Плавное появление страницы -->
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $("body").css("display","none").fadeIn(800);
+		});
+	</script>
+	<!--/Плавное появление страницы -->
+
+	<!-- Подключаем систему поиска Google -->
+	<script type="text/javascript">
+		(function()
+		{
+			var cx = '005306215916933014822:fqwd_wlcggc';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		})();
+	</script>
+	<!--/Подключаем систему поиска Google -->
+
+	<!-- Запрет на выделение текста -->
+	<script type="text/javascript">
+		document.ondragstart = noselect; 
+		// запрет на перетаскивание 
+		document.onselectstart = noselect; 
+		// запрет на выделение элементов страницы 
+		document.oncontextmenu = noselect; 
+		// запрет на выведение контекстного меню 
+		function noselect() {return false;} 
+	</script>
+	<!--/Запрет на выделение текста -->
+    
+	<!-- Личные настройки страницы -->
+   <style type="text/css">
+		h1.list
+		{
+			text-align: center;
+			
+			margin: 0 0 25px 0;
+		}
+		
+		div#currentCap
+		{
+			float: left;
+			width: 630px;
+			height: auto;
+			
+			margin: 0 0 15px 0;
+			padding: 0;
+		}
+		div#currentCap div.labelOfDoors
+		{
+			float:left;
+			
+			height: 160px;
+			width: auto;
+			
+			border: none;
+			margin: 0 0 0 64px;
+		}
+		div#currentCap div.galleryAndHeader h1
+		{
+			float: right;
+			padding: 0 10px 0 10px;
+			margin: -10px 128px 5px 0;
+		}
+		div#currentCap div.galleryAndHeader table
+		{
+			float: right;
+			border: none;
+			margin: 0 0 0 128px;
+		}
+	</style>
+	<!--/Личные настройки страницы -->
+         
+</head>
+
+<body itemscope itemtype="http://schema.org/Organization">
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter27807312 = new Ya.Metrika({id:27807312,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div>
+		<img src="//mc.yandex.ru/watch/27807312" style="position:absolute; left:-9999px;" alt="" />
+	</div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	
+	<!-- Rating@Mail.ru counter -->
+	<script type="text/javascript">
+	var _tmr = _tmr || [];
+	_tmr.push({id: "2597101",  type: "pageView", start: (new Date()).getTime()});
+	(function (d, w) {
+	   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+	   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+	   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+	   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+	})(document, window);
+	</script><noscript><div style="position:absolute;left:-10000px;">
+		<img src="//top-fwz1.mail.ru/counter?id=2597101;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+	</div></noscript>
+	<!-- /Rating@Mail.ru counter -->
+
+	<div id="head">
+		<figure class="word_header">
+			<figtext>Ателье &quot;Дверцог&quot;</figtext>
+			<figcaption>
+				<strong>Ателье благородных дверей</strong>
+				Хотите подобрать качественные и красивые двери, но не знаете где - ваша проблема решена!
+			</figcaption>
+		</figure>
+	</div><!-- /head -->
+	
+	<div class="clear"></div>
+	
+	<ul id="menu">
+		<li class="left"><a href="index.html">Главная</a></li>
+		<li class="left"><a href="doors.html">Двери "Дверцог"</a></li>
+		<li class="left"><a href="types_of_design.html">Виды дизайна</a></li>
+		<li class="center"><a href="#">3D-моделирование</a>
+        	<ul>
+				<li><a href="3d_modeling_architecture.html">Архитектура</a></li>
+				<li><a href="3d_modeling_apartments.html">Отделка квартир</a></li>
+				<li><a href="3d_modeling_office_solutions.html">Офисные решения</a></li>
+			</ul>
+		</li>
+		<li class="right"><a href="repair.html">Ремонт</a></li>
+		<li class="right"><a href="repair_stages.html">Этапы ремонта</a></li>
+		<li class="right"><a href="contacts.html">Контакты</a></li>
+	</ul><!--/menu -->
+    
+	<div class="clear"></div>
+    
+	<div id="main">
+		<div id="content">
+			
+			<figure class="page_header">
+				<span class="signature">
+					<a href="images/general/label/1.png" class="highslide" onclick="return hs.expand(this)" onMouseOver="tool_tip('Signature')" onMouseOut="tool_tip()">
+						<img src="images/general/label/thumb/1.png" class="label" style="height: auto; width:auto; border: none; border-radius: 0;" alt="" />
+					</a>
+				</span>
+				<figtext>Ателье «Дверцог»</figtext>
+				<span class="search">
+					<gcse:search></gcse:search>
+				</span>
+			</figure><!--/page_header -->
+			
+			<h1 class="list">Позвольте представить Вам ателье благородных дверей «Дверцог»</h1>
+			
+			<div id="slideshow" class="slideshow">
+				<img src="images/doors/0.jpg" alt="" />
+				<img src="images/doors/8.jpg" alt="" />
+				<img src="images/doors/9.jpg" alt="" />
+				<img src="images/doors/10_1.jpg" alt="" />
+				<img src="images/doors/10_2.jpg" alt="" />
+				<img src="images/doors/11.jpg" alt="" />
+				<img src="images/doors/11_2.jpg" alt="" />
+				<img src="images/doors/11_4.jpg" alt="" />
+				<img src="images/doors/12.jpg" alt="" />
+				<img src="images/doors/12_1.jpg" alt="" />
+				<img src="images/doors/13.jpg" alt="" />
+				<img src="images/doors/13_1.jpg" alt="" />
+				<img src="images/doors/13_2.jpg" alt="" />
+				<img src="images/doors/14.jpg" alt="" />
+				<img src="images/doors/14_1.jpg" alt="" />
+				<img src="images/doors/14_2.jpg" alt="" />
+				<img src="images/doors/15.jpg" alt="" />
+				<img src="images/doors/15_1.jpg" alt="" />
+				<img src="images/doors/15_2.jpg" alt="" />
+				<img src="images/doors/16.jpg" alt="" />
+				<img src="images/doors/16_1.jpg" alt="" />
+				<img src="images/doors/16_2.jpg" alt="" />
+				<img src="images/doors/17.jpg" alt="" />
+				<img src="images/doors/18.jpg" alt="" />
+				<img src="images/doors/19.jpg" alt="" />
+				<img src="images/doors/19_1.jpg" alt="" />
+				<img src="images/doors/21.jpg" alt="" />
+				<img src="images/doors/21_1.jpg" alt="" />
+				<img src="images/doors/22.jpg" alt="" />
+				<img src="images/doors/22_1.jpg" alt="" />
+				<img src="images/doors/23.jpg" alt="" />
+				<img src="images/doors/23_1.jpg" alt="" />
+				<img src="images/doors/23_2.jpg" alt="" />
+				<img src="images/doors/24.jpg" alt="" />
+				<img src="images/doors/24_1.jpg" alt="" />
+				<img src="images/doors/24_2.jpg" alt="" />
+				<img src="images/doors/25.jpg" alt="" />
+				<img src="images/doors/26.jpg" alt="" />
+				<img src="images/doors/27.jpg" alt="" />
+				<img src="images/doors/28.jpg" alt="" />
+				<img src="images/doors/29.jpg" alt="" />
+				<img src="images/doors/30.jpg" alt="" />
+				<img src="images/doors/31.jpg" alt="" />
+				<img src="images/doors/32.jpg" alt="" />
+				<img src="images/doors/33.jpg" alt="" />
+				<img src="images/doors/35.jpg" alt="" />
+			</div>
+			
+			<div id="currentCap">
+				<div class="labelOfDoors">
+					<a href="http://www.dvertsog.ru/" target="_blank">
+						<img src="images/doors/thumb/label.png" alt="" itemprop="logo" />
+					</a>
+				</div>
+				
+				<div class="galleryAndHeader"><!-- galleryAndHeader -->
+					<table>
+						<tr>
+							<td>
+								<h1>Галерея</h1>
+								<div class="highslide-gallery">
+									<a class="highslide" id="thumb1" href="images/doors/0.jpg" title="" onclick="return hs.expand(this, { slideshowGroup: 1 })" onMouseOver="tool_tip('Галерея дверей &quot;Дверцог&quot;')" onMouseOut="tool_tip()">
+										<img src="images/doors/thumb/0.jpg" class="cover" alt="" />
+									</a>
+									<div class="hidden-container">
+										<a class="highslide" href="images/doors/1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/5.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/5.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/6.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/6.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/7.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/7.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/8.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/8.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/9.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/9.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/10.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/10.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/10_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/10_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/10_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/10_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/10_3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/10_3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/10_4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/10_4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_5.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_5.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_6.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_6.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_7.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_7.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/11_8.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/11_8.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_5.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_5.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/12_6.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/12_6.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/13.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/13.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/13_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/13_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/13_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/13_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/14.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/14.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/14_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/14_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/14_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/14_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/15.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/15.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/15_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/15_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/15_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/15_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/16.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/16.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/16_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/16_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/16_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/16_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/16_3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/16_3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/16_4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/16_4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/17.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/17.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/17_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/17_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/18.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/18.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/18_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/18_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/18_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/18_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/19.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/19.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/19_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/19_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/19_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/19_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20_3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20_3.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20_4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20_4.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/20_5.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/20_5.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/21.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/21.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/21_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/21_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/22.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/22.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/22_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/22_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/23.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/23.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/23_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/23_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/23_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/23_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/24.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/24.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/24_1.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/24_1.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/24_2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/24_2.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/25.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/25.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/26.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/26.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/27.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/27.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/28.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/28.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/29.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/29.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/30.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/30.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/31.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/31.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/32.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/32.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/33.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/33.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/34.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/34.jpg" alt="" />
+										</a>
+										<a class="highslide" href="images/doors/35.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })">
+											<img src="images/doors/thumb/35.jpg" alt="" />
+										</a>
+									</div>
+								</div><!--/gallery -->
+							</td>
+						</tr>
+					</table>
+				</div><!--/galleryAndHeader -->
+			</div>
+			
+			<div>
+				<h4>Ателье благородных дверей <strong itemprop="name">«Дверцог»</strong> - это быстроразвивающееся <span itemprop="makesOffer">предприятие по производству межкомнатных дверей для квартир и офиса, загородных особняков и респектабельных коттеджей, гостиниц и ресторанов</span>.</h4>
+				<h4>Это ателье успешно существует на рынке уже 17 лет. Примерно столько времени потребовалось компании, чтобы из небольшой мастерской, с ручным изготовлением дверей на всех этапах, завоевать популярность и стать крупным предприятием.</h4>
+				<h4>Благодаря широкому выбору текстур и материалов стекла, матовых и глянцевых отделок, вы можете создать дверь, которая нужна именно вам!</h4>
+				<h4>Привлеките в Ваш дом роскошь и богатство и впустите их через элитные двери от ателье <strong>«Дверцог»</strong>.</h4>
+			</div>
+			
+			<hr style="margin-bottom: 20px;" />
+				
+			<button class="drop-down" id="clickme">Где находится?</button>
+			<script type="text/javascript">
+					$('#clickme').click(function()
+					{
+						$('#latent').slideToggle('slow', function()
+						{
+							// Animation complete.
+						});
+					});
+			</script><!--/Скрыть содержимое -->
+			<h4 id="latent" style="display: none;">Выставочный зал Ателье благородных дверей <strong>"Дверцог"</strong> <span itemprop="address">в г. Санкт-Петербурге в данный момент находится на временной реконструкции</span>.</h4>
+			<h4 style="display: none;" itemprop="telephone">+7-000-000-00-00</h4>
+			
+			<div class="container">
+				<div id="linkToAnything">
+					<ul class="peri-boxes">
+						<li>
+							<span>
+								<h4>
+									<a href="http://www.dvertsog.ru/" class="box" target="_blank" onMouseOver="tool_tip('')" onMouseOut="tool_tip()" itemprop="sameAs"><strong>Сайт "Дверцог"</strong></a>
+								</h4>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+				
+		</div><!-- /content -->
+	</div><!-- /main -->
+
+	<div class="clear"></div>
+
+	<div id="footer">
+		<figure class="page_footer">
+			<a href="mailto:partner4345@yandex.ru" title="Связаться по электронной почте" itemprop="email">
+				<span class="mail"></span>
+			</a>
+			
+			<!-- Yandex.Metrika informer -->
+			<!-- <a href="https://metrika.yandex.ru/stat/?id=27807312&amp;from=informer" target="_blank" rel="nofollow" class="counter_left"> -->
+				<!-- <img src="//bs.yandex.ru/informer/27807312/3_0_DBDBDBFF_BBBBBBFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:27807312,lang:'ru'});return false}catch(e){}"/> -->
+			<!-- </a> -->
+			<!-- /Yandex.Metrika informer -->
+		
+			<figtext></figtext>
+			
+			<!-- Rating@Mail.ru logo -->
+			<!-- <a target="_blank" href="http://top.mail.ru/jump?from=2597101" class="counter_right"> -->
+				<!-- <img src="//top-fwz1.mail.ru/counter?id=2597101;t=465;l=1" border="0" height="31" width="88" alt="Рейтинг@Mail.ru"> -->
+			<!-- </a> -->
+			<!-- /Rating@Mail.ru logo -->
+			
+			<a href="skype:ArtDizainProekt?chat" title="Связаться через skype">
+				<span class="skype"></span>
+			</a>
+		</figure>
+	</div><!--/footer -->
+
+	<div class="clear"></div>
+
+	<p id="back-top">
+		<a href="#top"><span></span>Вверх</a>
+	</p>
+	<div id="float_tip"></div>
+
+</body>
+</html>

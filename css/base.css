@@ -1,0 +1,1241 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Подключение своего шрифта */
+@font-face
+{
+	font-family: Pompadur; /* Гарнитура шрифта */
+	src: url(fonts/pompadur.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Page style */
+html
+{
+	color: none;
+	background-color: none;
+	background-attachment: fixed;
+	background-image: url('images/general/background/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -o-background-size: 100% 100%; /* opera ≥ 9.5 */
+    -webkit-background-size: 100% 100%; /* Safari ≥ 5.0, Chrome ≥ 4.0 */
+    -khtml-background-size: 100% 100%; /* Konqueror ≥ 3.5.4 */
+    -moz-background-size: 100% 100%; /* Firefox ≥ 3.6 */
+    background-size: 100% 100%; /* браузеры с поддержкой CSS3: FF ≥ 4, Opera ≥ 10.53, IE ≥ 9.0 */
+}
+html > body #footer
+{
+	height: auto;
+}
+body
+{
+	width: 1280px;
+	margin: auto;
+	-webkit-font-smoothing: subpixel-antialiased;
+	letter-spacing: 0;
+}
+/* /Page style */
+
+/* "id" styles */
+#head
+{
+	width: 1080px;
+	margin: auto;
+	margin-top: 7px;
+	margin-bottom: -2px;
+	alignment-adjust:auto;
+}
+#main
+{
+	/* opacity: 0.9; */
+	width: 1020px;
+	position: relative;
+	
+	margin: auto;
+	margin-top: 12px;
+	margin-bottom: 7px;
+	
+	border: 1px solid #222222;
+	/* background-color: #CECECE; */
+	background: rgba(206,206,206, 0.9);
+	
+	/* border-radius */
+	-webkit-border-radius: 200px 20px 100px 20px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 200px 20px 100px 20px; /* Firefox */
+	border-radius: 200px 20px 100px 20px; /* CSS3 */
+	
+	-webkit-border-top-right-radius: 20px 7px;
+	-moz-border-top-right-radius: 20px 7px;
+	 border-top-right-radius: 20px 7px;
+	 
+	 -webkit-border-bottom-left-radius: 20px 7px;
+	 -moz-border-bottom-left-radius: 20px 7px;
+	 border-bottom-left-radius: 20px 7px;
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 4px 0 #222222, 2px 2px 10px 2px #777777; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 4px 0 #222222, 2px 2px 10px 2px #777777; /* Firefox */
+	box-shadow: inset 0 0 4px 0 #222222, 2px 2px 10px 2px #777777; /* CSS 3.0 */
+	/* /box-shadow */
+}
+#main:before
+{
+	 content:''; 
+	 width: 50px;
+	 height: 40px;
+	 position: absolute;
+	 bottom: 0px;
+	 right: 0px;
+	
+	 /* border-radius */
+	 -webkit-border-bottom-right-radius: 50px;
+	 -moz-border-radius: 50px; /* Firefox */
+	 border-bottom-right-radius: 50px;
+	 /* /border-radius */
+	 
+	 /* box-shadow */
+	 -webkit-box-shadow: -4px -4px 10px rgba(34, 34, 34, 0.6);
+	 -moz-box-shadow: -4px -4px 10px rgba(34, 34, 34, 0.6);
+	 box-shadow: -4px -4px 10px rgba(34, 34, 34, 0.6);
+	 /* box-shadow */
+	 
+	 /* transform */
+	 -webkit-transform: rotate(-20deg)
+		  skew(-40deg,-3deg)
+		  translate(-13px,-13px);
+	 -moz-transform: rotate(-20deg)
+		  skew(-40deg,-3deg)
+		  translate(-13px,-13px); 
+	 -o-transform: rotate(-20deg)
+		  skew(-40deg,-3deg)
+		  translate(-13px,-13px); 
+	 transform: rotate(-20deg)
+		  skew(-40deg,-3deg)
+		  translate(-13px,-13px);
+	 /* /transform */
+}
+#main:after
+{
+	 content: '';
+	 width: 50px;
+	 height: 40px;
+	 position: absolute;
+	 bottom: 0px;
+	 right: 0px;
+	 z-index: -1;
+	 
+	 background: rgba(0, 0, 0, 0);
+	 display: inline-block;
+	 
+	 /* box-shadow */
+	 -webkit-box-shadow: 20px 20px 8px rgba(119, 119, 119, 0.6);
+	 -moz-box-shadow: 20px 20px 8px rgba(119, 119, 119, 0.6);
+	 box-shadow: 20px 20px 8px rgba(119, 119, 119, 0.6);
+	 /* /box-shadow */
+	 
+	 /* transform */
+	 -webkit-transform: rotate(0deg)
+		  translate(-40px,-30px)
+			 skew(20deg);
+	 -moz-transform: rotate(0deg)
+		  translate(-40px,-30px)
+			 skew(20deg);
+	 -o-transform: rotate(0deg)
+		  translate(-40px,-30px)
+			 skew(20deg);
+	 transform: rotate(0deg)
+		  translate(-40px,-30px)
+			 skew(20deg);
+	/* /transform */
+}
+.main_corner_lb
+{
+	 width: 100px;
+	 height: 100px;
+	 bottom: -2px; left: -4px;
+	 position:absolute;
+	 display: inline-block;
+	 z-index: -1;
+	 
+	 /* box-shadow */
+	 -webkit-box-shadow: -10px -10px 8px rgba(119, 119, 119, 0.6);
+	 -moz-box-shadow: -10px -10px 8px rgba(119, 119, 119, 0.6);
+	 box-shadow: -10px -10px 8px rgba(119, 119, 119, 0.6);
+	 /* /box-shadow */
+	 
+	 /* transform */
+	 -webkit-transform: rotate(-68deg)
+		  translate(20px, 20px)
+			 skew(20deg);
+	 -moz-transform: rotate(-68deg)
+		  translate(20px,20px)
+			 skew(20deg);
+	 -o-transform: rotate(-68deg)
+		  translate(20px,20px)
+			 skew(20deg);
+	 transform: rotate(-68deg)
+		  translate(20px,20px)
+			 skew(20deg);
+	 /* /transform */
+}
+.main_corner_rt
+{
+	 content: '';
+	 width: 100px;
+	 height: 100px;
+	 top:0; right:0;
+	 position:absolute;
+	 display: inline-block;
+	 z-index: -1;
+	 
+	 /* box-shadow */
+	 -webkit-box-shadow: 10px -10px 8px rgba(119, 119, 119, 0.6);
+	 -moz-box-shadow: 10px -10px 8px rgba(119, 119, 119, 0.6);
+	 box-shadow: 10px -10px 8px rgba(119, 119, 119, 0.6);
+	 /* /box-shadow */
+	 
+	 /* transform */
+	 -webkit-transform: rotate(2deg)
+		  translate(-20px,15px)
+			 skew(-20deg);
+	 -moz-transform: rotate(2deg)
+		  translate(-20px,15px)
+			 skew(-20deg);
+	 -o-transform: rotate(2deg)
+		  translate(-20px,15px)
+			 skew(-20deg);
+	 transform: rotate(2deg)
+		  translate(-20px,15px)
+			 skew(-20deg);
+	 /* /transform */
+}
+
+#content
+{
+	margin: 30px 50px 30px 50px;
+}
+#content_bottom
+{
+	height: 50px;
+	
+	margin: -5px auto -15px;
+	padding: 0 5px 0 0;
+	clear: both;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+	
+	border: 1px solid #222222;
+	border: none;
+}
+#search_page
+{
+	margin-left: 130px;
+	margin-top: 2px;
+	float: left;
+	position:fixed;
+	left: 20px;
+	top: 20px;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+#float_tip /* Всплывающая подсказка */
+{
+	position: absolute;
+	z-index: 9999;
+	width: auto;
+	display: none;
+	
+	text-align: center;
+	padding: 4px 10px 4px 10px;
+	
+	color: #EEEEEE;
+	border: 2px linear-gradient(top, #777777, #444444);
+	
+	/* border-radius */
+	-webkit-border-radius: 20px 6px 20px 6px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 20px 6px 20px 6px; /* Firefox */
+	border-radius: 20px 6px 20px 6px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Firefox */
+	box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 90%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 90%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 90%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 90%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 90%); /* CSS3 */
+	/* /background */
+	
+	/* transition */
+	-webkit-transition: all 0.3s ease-in-out; /* Safari и Chrome */
+	-moz-transition: all 0.3s ease-in-out; /* Firefox */
+	-o-transition: all 0.3s ease-in-out; /* Opera */
+	transition: all 0.3s ease-in-out; /* CSS3 */
+	/* /transition */
+}
+/* /Всплывающая подсказка */
+	
+/* Кнопка "вверх" */
+#back-top
+{
+	position: fixed;
+	bottom: 34px;
+	margin-left: 56px;
+}
+#back-top a
+{
+	opacity: 1;
+	width: 60px;
+	display: block;
+	
+	color: #bbb;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font: 11px/100% Georgia, "Times New Roman", Times, serif;
+
+	/* transition */
+	-webkit-transition: all 0.3s ease-in-out; /* Safari и Chrome */
+	-moz-transition: all 0.3s ease-in-out; /* Firefox */
+	-o-transition: all 0.3s ease-in-out; /* Opera */
+	transition: all 0.3s ease-in-out; /* CSS3 */
+	/* /transition */
+}
+#back-top a:hover
+{
+	color: #000000;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+#back-top span /* иконка стрелки (тег span) */
+{
+	opacity: 0.75;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin-bottom: -4px;
+	
+	background: url(images/arrows/1.png) no-repeat center center;
+	/* background-size: 60px; */
+	
+	/* transition */
+	-webkit-transition: all 0.3s linear; /* Safari и Chrome */
+	-moz-transition: all 0.3s linear; /* Firefox */
+	-o-transition: all 0.3s linear; /* Opera */
+	transition: all 0.3s linear; /* CSS3 */
+	/* /transition */
+}
+#back-top a:hover span
+{
+	opacity: 1;
+}
+#back-top a:active span
+{
+	opacity: 0.5;
+}
+/* /Кнопка "вверх" */
+
+#linkToAnything
+{
+	height: 20px;
+	
+	padding: 0;
+	margin: -20px 20px 40px 0;
+	border: 0px solid #222222;
+	
+	clear: both;
+	text-align: center;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+#linkToAnything span
+{
+	float: right;
+}
+
+/* Реклама */
+#advertising_left
+{
+	display: block;
+	position: fixed;
+	
+	margin-top: 35px;
+	margin-left: -50px;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+#advertising_right
+{
+	display: block;
+	position: absolute;
+	
+	margin-top: 35px;
+	margin-left: 1160px;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.objectAllocation
+{
+	opacity: 0.75;
+	border: 2px solid #444444;
+	
+	/* width: 160px;
+	height: 600px; */
+	
+	/* border-radius */
+	-webkit-border-radius: 50px 12px 50px 12px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 50px 12px 50px 12px; /* Firefox */
+	border-radius: 50px 12px 50px 12px; /* CSS3 */
+			
+	-webkit-border-top-right-radius: 12px 6px;
+	-moz-border-top-right-radius: 12px 6px;
+	border-top-right-radius: 12px 6px;
+			
+	-webkit-border-bottom-left-radius: 12px 6px;
+	-moz-border-bottom-left-radius: 12px 6px;
+	border-bottom-left-radius: 12px 6px;
+	/* /border-radius */
+	
+	/* transition */
+	-webkit-transition: all 0.4s ease-in-out; /* Safari и Chrome */
+	-moz-transition: all 0.4s ease-in-out; /* Firefox */
+	-o-transition: all 0.4s ease-in-out; /* Opera */
+	transition: all 0.4s ease-in-out; /* CSS3 */
+	/* /transition */
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.objectAllocation:hover
+{
+	opacity: 1;
+	color: white;
+	
+	border-width: 2px;
+	border-style: solid;
+	border-color: #777777;
+	
+	/* box-shadow */
+	-webkit-box-shadow: 0 0 20px 4px #777777; /* Safari и Chrome */
+	-moz-box-shadow: 0 0 20px 4px #777777; /* Firefox */
+	box-shadow: 0 0 20px 4px #777777; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 90%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 90%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 90%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 90%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 90%); /* CSS3 */
+	/* /background */
+}
+.objectAllocation:active
+{
+	color: #BEBEBE;
+	
+	/* transition */
+	-webkit-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Safari и Chrome */
+	-moz-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Firefox */
+	-o-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Opera */
+	transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* CSS3 */
+	/* /transition */
+}
+/* /Реклама */
+/* "id" styles */
+
+/* Слайд-шоу */
+.slideshow
+{
+	position: relative;
+	display: block;
+	
+	height: 356px;
+	width: 256px;
+	
+	float: right;
+	
+	margin: 10px 20px 30px 10px;
+}
+.slideshow_left
+{
+	position: relative;
+	display: block;
+	
+	height: 356px;
+	width: 256px;
+	
+	float: left;
+	
+	margin: 10px 50px 30px 10px;
+}
+.slideshow img
+{
+	width: 256px;
+	height: 356px;
+	
+	padding: 14px;
+	border: 1px solid #CCCCCC;
+	background-color: #EEEEEE;
+	
+	/* border-radius */
+	-webkit-border-radius: 200px 30px 50px 30px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 200px 30px 50px 30px; /* Firefox */
+	border-radius: 200px 25px 50px 25px; /* CSS3 */
+	
+	-webkit-border-top-right-radius: 30px 12px;
+	-moz-border-top-right-radius: 30px 12px;
+	 border-top-right-radius: 30px 12px;
+	 
+	 -webkit-border-bottom-left-radius: 30px 12px;
+	 -moz-border-bottom-left-radius: 30px 12px;
+	 border-bottom-left-radius: 30px 12px;
+	/* /border-radius */
+}
+.slideshow:hover
+{
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+/* Слайд-шоу */
+	
+/* Различные формы */
+.figure
+{
+	padding: 0 12px 0 12px;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.label
+{
+	float: left;
+	margin: 0 -12px 0 90px;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+div.clear
+{
+	clear: both;
+	line-height: 0;
+	font-size: 0;
+	height: 0
+}
+
+button.drop-down /* Выпадающее содержание */
+{
+	color: #EEEEEE;
+	font-weight: bold;
+	font-size: medium;
+	font-family: "Times New Roman", Times, serif;
+	
+	margin: 0.5em 0 0.5em 18px;
+	padding: 2px 8px 3px 12px;
+	
+	border: 2px linear-gradient(top, #777777, #444444);
+	
+	/* border-radius */
+	-webkit-border-radius: 20px 6px 20px 6px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 20px 6px 20px 6px; /* Firefox */
+	border-radius: 20px 6px 20px 6px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 1px 0 #444444, 0 1px 0 #444444;/* Safari и Chrome */
+	-moz-box-shadow: inset 0 1px 0 #444444, 0 1px 0 #444444; /* Firefox */
+	box-shadow: inset 0 1px 0 #444444, 1px 1px 0 #444444; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* transition */
+	-webkit-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Safari и Chrome */
+	-moz-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Firefox */
+	-o-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Opera */
+	transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* CSS3 */
+	/* /transition */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 80%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 80%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 80%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 80%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 80%); /* CSS3 */
+	/* /background */
+}
+button.drop-down:hover
+{
+	color: white;
+	border-color: linear-gradient(#777777, #444444);
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 1px 0 #444444, 1px 1px 0 #444444, 0 0 12px 2px #444444; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 1px 0 #444444, 1px 1px 0 #444444, 0 0 12px 2px #444444; /* Firefox */
+	box-shadow: inset 0 1px 0 #444444, 1px 1px 0 #444444, 0 0 12px 2px #444444; /* CSS3 */
+	/* /box-shadow */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 60%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 60%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 60%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 60%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 60%); /* CSS3 */
+	/* /background */
+}
+/* /Различные формы */
+	
+/* Оформление текстовых ссылок */
+a
+{
+	color: black;
+	
+	border: none;
+	outline: none; /* Убирает полную обводку объекта для ссылок */
+	text-decoration: none; /* Убирает подчеркивание для ссылок */
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+a.text
+{
+	padding: 4px 10px 4px 10px;
+	margin: -4px -10px -4px -10px;
+	
+	overflow: auto;
+	white-space: nowrap;
+	text-decoration: underline; /* Убирает подчеркивание для ссылок */
+	
+	/* border-radius */
+	-webkit-border-radius: 20px 6px 20px 6px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 20px 6px 20px 6px; /* Firefox */
+	border-radius: 20px 6px 20px 6px; /* CSS3 */
+	/* /border-radius */
+	
+	/* transition */
+	-webkit-transition: box-shadow 0.3s linear; /* Safari и Chrome */
+	-moz-transition: box-shadow 0.3s linear; /* Firefox */
+	-o-transition: box-shadow 0.3s linear; /* Opera */
+	transition: box-shadow 0.3s linear; /* CSS3 */
+	/* /transition */
+}
+a.text:link
+{
+}
+a.text:visited
+{
+}
+a.text:hover
+{
+	color: white;
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Firefox */
+	box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 90%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 90%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 90%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 90%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 90%); /* CSS3 */
+	/* /background */
+}
+a.text:active
+{
+	color: #BEBEBE;
+	
+	/* transition */
+	-webkit-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Safari и Chrome */
+	-moz-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Firefox */
+	-o-transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* Opera */
+	transition: color 0.3s linear, box-shadow 0.3s ease-in-out; /* CSS3 */
+	/* /transition */
+}
+/* /Оформление текстовых ссылок */
+	
+/* Оформление списков */
+ul.indented
+{
+	list-style-type: disc;
+	
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	
+	padding-left: 48px;
+	text-indent: 4px;
+	text-align: left;
+	
+	font-weight: 500;
+	font-size: medium;
+	font-family: "Times New Roman", Times, serif;
+}
+ol.indented
+{
+	list-style-type: decimal;
+	
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	
+	padding-left: 48px;
+	text-indent: 4px;
+	text-align: left;
+	
+	font-weight: 500;
+	font-size: medium;
+	font-family: "Times New Roman", Times, serif;
+}
+/* /Оформление списков */
+
+/* Настройка шрифтов */
+p.indented
+{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+div.header
+{
+	clear: both;
+	margin: 5px auto 20px;
+	
+	color: #fff;
+	text-align: center;
+	font: 7em 'ChunkFiveRegular';
+	text-shadow: 0 1px 0 #ccc,
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.2),
+	0 20px 20px rgba(0,0,0,.15);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin: 0;
+	padding: 0;
+	
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+}
+h1
+{ 
+	font-size: larger;
+	font-style: oblique;
+	
+	padding-top: 22px;
+	margin: 0 0 40px 0;
+	/*
+	text-shadow: 0 1px 0 #000000, 0 2px 0 #888888, 0 3px 0 #777777, 0 4px 0 #FFFFFF, 0 5px 0 #555555, 0 6px 0 #444444, 0 7px 0 #333333, 0 8px 7px #001135;
+	text-shadow: 0 1px 0 #777777, 0 2px 0 #FFFFFF, 0 3px 0 #444444;
+	*/
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.7);;
+}
+h2
+{
+	font-size: inherit;
+	
+	padding: 10px;	
+	text-indent: 25px;
+}
+h2.list
+{
+	margin: 50px 0 0 0;
+}
+h3
+{
+	font-weight: 500;
+	font-size: medium;
+	
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	
+	text-indent: 25px;
+	text-align: justify;
+}
+h4
+{
+	font-weight: 500;
+	font-size: medium;
+	
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	
+	text-indent: 25px;
+	text-align: justify;
+}
+/* /Настройка шрифтов */
+
+.page_header /* общий блок */
+{	
+	position: relative;
+	display: table;
+	
+	width: 1020px;
+	height: auto;
+	
+	border: 0;
+	padding: 0;
+	margin: 0 0 20px 0;
+	text-align: center;
+	
+	color: rgb(223,223,223);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: url(/highslide/graphics/zoomin.cur), pointer !important;
+}
+.page_header figtext
+{
+	position: relative;
+	display: inline;
+	clear: both;
+	
+	margin: 0 0 0 -70px;
+	padding: 0;
+	line-height: 40px;
+	
+	font-family: "Times New Roman", Times, serif;
+	font-size: larger;
+	font-weight: bold;
+	font-style: oblique;
+	
+	color: black;
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.7);
+}
+.page_header > figtext_without_logo
+{
+	position: relative;
+	display: inline;
+	
+	clear: both;
+	
+	margin: 0;
+	padding: 0;
+	line-height: 40px;
+	
+	font-family: "Times New Roman", Times, serif;
+	font-size: larger;
+	font-weight: bold;
+	font-style: oblique;
+	
+	color: black;
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.7);;
+}
+.page_header span.signature
+{
+	position: absolute;
+	display: inline-block;
+	
+	top: -10px;
+	left: 15px;
+	
+	margin: 0;
+	padding: 0;
+	
+	width: 244px;
+	height: 44px;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.page_header span.search
+{
+	position: absolute;
+	display: inline-block;
+	
+	top: -10px;
+	right: 90px;
+	
+	margin: -15px -34px 0 0;
+	padding: 0;
+	
+	width: 356px;
+	
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+
+.page_footer /* общий блок */
+{	
+	position: relative;
+	display: table;
+	
+	height: 39px;
+	width: 1080px;
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+	
+	text-align: center;
+	vertical-align: center;
+	
+	color: none;
+	background-color: none;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.page_footer span.mail
+{
+	position: absolute;
+	display: inline-block;
+	
+	top: -1.5px;
+	left: 15px;
+	
+	margin: 0;
+	padding: 0;
+	
+	width: 42px;
+	height: 42px;
+	
+	z-index: 9998;
+	
+	background: url(../images/general/footer/mail_ru.png) center center no-repeat;
+}
+.page_footer span.skype
+{
+	position: absolute;
+	display: inline-block;
+	
+	top: -1.5px;
+	right: 15px;
+	
+	margin: 0;
+	padding: 0;
+	
+	width: 42px;
+	height: 42px;
+	
+	z-index: 9998;
+	
+	background: url(../images/general/footer/skype.png) center center no-repeat;
+}
+.page_footer a.counter_left
+{
+	display: inline-block;
+	position: absolute;
+	
+	left: 230px;
+	bottom: 4px;
+}
+.page_footer a.counter_right
+{
+	display: inline-block;
+	position: absolute;
+	
+	right: 230px;
+	bottom: 4px;
+}
+.page_footer > figtext
+{
+	margin: 0 auto;
+	padding: 0;
+}
+.page_footer > figtext:before/* Телефон */
+{
+	position: relative;
+	display: inline-block;
+	clear: both;
+	
+	line-height: 39px;
+
+	margin: 0 auto;
+	content: "+7 911 760-65-81";
+}
+.page_footer > figtext:after/* Адрес */
+{
+	position: relative;
+	display: inline-block;
+	clear: both;
+	
+	line-height: 39px;
+	padding-left: 10px;
+	
+	margin: 0 auto;
+	content: "г. Санкт-Петербург, Выборгское шоссе 15";
+}
+
+/* Стилизация head */
+.img_header /* общий блок */
+{	
+	position: relative;
+	display: table;
+	line-height: 0;
+	margin: 0 auto;
+	
+	border: 2px solid #222222;
+	
+	/* border-radius */
+	-webkit-border-radius: 16px 16px 16px 16px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 16px 16px 16px 16px; /* Firefox */
+	border-radius: 16px 16px 16px 16px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: 0 0 10px 2px #777777; /* Safari и Chrome */
+	-moz-box-shadow: 0 0 10px 2px #777777; /* Firefox */
+	box-shadow: 0 0 10px 2px #777777; /* CSS3 */
+	/* box-shadow */
+	
+	color: rgb(223,223,223);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: url(..../highslide/graphics/zoomin.cur), pointer !important;
+}
+
+.img_header:after /* "подробнее" */
+{
+	content: "подробнее \bb";
+	background: rgba(119,119,119, 0.7);
+	
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 5px 10px;
+	line-height: 1.6em;
+	
+	/* border-radius */
+	-webkit-border-radius: 30px 8px 30px 8px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 30px 8px 30px 8px; /* Firefox */
+	border-radius: 30px 8px 30px 8px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Firefox */
+	box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* CSS3 */
+	/* /box-shadow */
+}
+.img_header:hover:after
+{
+	content: none;
+}
+.img_header figcaption
+{
+	display: none;
+}
+.img_header:hover figcaption /* прозрачная область */
+{
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	
+	font-size: 90%;
+	line-height: 1.3em;
+	padding: 5px 10px;
+	
+	/* border-radius */
+	-webkit-border-radius: 50px 12px 50px 12px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 50px 12px 50px 12px; /* Firefox */
+	border-radius: 50px 12px 50px 12px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Firefox */
+	box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* CSS3 */
+	/* box-shadow */
+	
+	background: rgba(119,119,119, 0.7);
+	/* background: rgba(68,85,102, 0.7); */
+}
+.img_header:hover figcaption strong /* заголовок */
+{
+	display: block;
+	line-height: 2em;
+	
+	font-size: 100%;
+	padding-left: 14px;
+}
+
+.word_header /* общий блок */
+{	
+	position: relative;
+	display: table;
+	line-height: 0;
+	margin: 0 auto;
+	width: 1080px;
+	height: auto;
+	
+	border: none;
+	padding: none;
+	
+	color: rgb(223,223,223);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+}
+.word_header:after /* "подробнее" */
+{
+	content: "подробнее \bb";
+	background: rgba(119,119,119, 0.7);
+	
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 5px 10px;
+	line-height: 1.6em;
+	
+	/* border-radius */
+	-webkit-border-radius: 30px 8px 30px 8px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 30px 8px 30px 8px; /* Firefox */
+	border-radius: 30px 8px 30px 8px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Firefox */
+	box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* CSS3 */
+	/* /box-shadow */
+}
+.word_header:hover:after
+{
+	content: none;
+}
+.word_header  figtext
+{
+	position: relative;
+	display: block;
+	
+	clear: both;
+	text-align: center;
+	margin: 0px auto 15px;
+	padding: 0;
+	
+	color: #fff; 
+	font: 7em 'ChunkFiveRegular'; 
+	text-shadow: 0 1px 0 #ccc,
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.2),
+	0 20px 20px rgba(0,0,0,.15);
+}
+.word_header figcaption
+{
+	display: none;
+}
+.word_header:hover figcaption /* прозрачная область */
+{
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	
+	font-size: 90%;
+	line-height: 1.3em;
+	padding: 5px 10px;
+	
+	/* border-radius */
+	-webkit-border-radius: 50px 12px 50px 12px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 50px 12px 50px 12px; /* Firefox */
+	border-radius: 50px 12px 50px 12px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Firefox */
+	box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* CSS3 */
+	/* box-shadow */
+	
+	background: rgba(119,119,119, 0.7);
+	/* background: rgba(68,85,102, 0.7); */
+}
+.word_header:hover figcaption strong /* заголовок */
+{
+	display: block;
+	line-height: 2em;
+	
+	font-size: 100%;
+	padding-left: 14px;
+}
+/* /Стилизация head */
+
+/* Кнопка поиска */
+.form-search
+{
+	display: inline-block;
+	padding: 4px;
+	
+	/* background */
+	background: -webkit-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B); /* Safari и Chrome */
+	background: -moz-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B); /* Firefox */
+	background: -o-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B); /* Opera */
+	background: -ms-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B); /* IE10 */
+	background: linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B); /* CSS3 */
+	/* /background */
+	
+	/* border-radius */
+	-webkit-border-radius: 6px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 6px; /* Firefox */
+	border-radius: 6px; /* CSS3 */
+	/* /border-radius */
+}
+.form-search input
+{
+	width: 115px;
+	height: 32px;
+	line-height: 32px;
+	
+	padding: 0 30px 0 6px;
+	text-shadow: 0 1px 0 #FFF;
+	
+	color:#6E7074;
+	font: 13px Helvetica, Arial, sans-serif; 
+	
+	border: 1px solid #747474;
+	
+	/* border-radius */
+	-webkit-border-radius: 3px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 3px; /* Firefox */
+	border-radius: 3px; /* CSS3 */
+	/* border-radius */
+
+	/* box-shadow */
+	filter: progid:DXImageTransform.Microsoft.shadow(direction=315, color=#FFFFFF, strength=10); /* IE */
+	-webkit-box-shadow: inset 0 1px 1px #575555, 0 1px 0 #FFFFFF; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 1px 1px #575555, 0 1px 0 #FFFFFF; /* Firefox */
+	box-shadow: inset 0 1px 1px #575555, 0 1px 0 #FFFFFF; /* CSS3 */
+	/* box-shadow */
+	
+	/* transition */
+	-webkit-transition: all .2s ease-out; /* Safari and Chrome */
+	-moz-transition: all .2s ease-out; /* Firefox */
+	-o-transition: all .2s ease-out; /* Opera */
+	transition: all .2s ease-out; /* CSS3 */
+	/* /transition */
+	
+	/* background */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -webkit-linear-gradient(#BCBCBC, #EBEBEB); /* Safari и Chrome */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -moz-linear-gradient(#BCBCBC, #EBEBEB); /* Firefox */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -o-linear-gradient(#BCBCBC, #EBEBEB); /* Opera */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -ms-linear-gradient(#BCBCBC, #EBEBEB); /* IE10 */
+	background-repeat: no-repeat; 
+	background-position: 100% 50%, 100% 100%;
+	/* /background */
+}
+.form-search input:focus
+{
+	width: 200px;
+	color: #25464D;
+	
+	/* box-shadow */
+	filter: progid:DXImageTransform.Microsoft.shadow(direction=315, color=#FFFFFF, strength=10); /* IE */
+	-webkit-box-shadow: inset 0 1px 1px #46575b, 0 1px 0 #FFFFFF; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 1px 1px #46575b, 0 1px 0 #FFFFFF; /* Firefox */
+	box-shadow: inset 0 1px 1px #46575b, 0 1px 0 #FFFFFF; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* background */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -webkit-linear-gradient(#9CC2CA, #DFECEF); /* Safari и Chrome */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -moz-linear-gradient(#9CC2CA, #DFECEF); /* Firefox */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -o-linear-gradient(#9CC2CA, #DFECEF); /* Opera */
+	background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -ms-linear-gradient(#9CC2CA, #DFECEF); /* IE10 */
+	/* /background */
+}
+/* /Кнопка поиска */

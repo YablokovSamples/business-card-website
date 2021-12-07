@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container
+{
+	z-index: 701;
+	width: 1080px;
+	height: 560px;
+	position: relative;
+	
+	margin: 10px auto 0px auto;
+	padding: 0;
+}
+#summary
+{
+	width: 1080px;
+	height: 560px;
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+}
+#frame
+{
+	position: absolute;
+	z-index: 0;
+	left: -1px;
+	top: -1px;
+	width: 1082px;
+	height: 562px;
+
+	border: 4px solid #222;
+	
+	/* border-radius */
+	-webkit-border-radius: 16px; /* Для Safari, Chrome, iOS */
+	-moz-border-radius: 16px; /* Для Firefox */
+	border-radius: 16px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: 0 0 10px 2px #777777; /* Для Safari и Chrome */
+	-moz-box-shadow: 0 0 10px 2px #777777; /* Для Firefox */
+	box-shadow: 0 0 10px 2px #777777; /* CSS3 */
+	/* /box-shadow */
+}
+#ribbon
+{
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	z-index: 500;
+}
+p.header_slider
+{
+	position: absolute;
+	margin: 0 0 0 290px;
+	z-index: 803;
+	
+	color: #fff; 
+	font: 4em 'ChunkFiveRegular'; 
+	text-shadow: 0 1px 0 #ccc,
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.2),
+	0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Slideshow */
+#slides
+{
+	width: 1068px;
+	height: 548px;
+	position: absolute;
+	z-index: 100;
+	
+	margin: 0;
+	padding: 0 2px 2px 0;
+	
+	border: 5px solid #000;
+	
+	/* border-radius */
+	-webkit-border-radius: 25px; /* Для Safari, Chrome, iOS */
+	-moz-border-radius: 25px; /* Для Firefox */
+	border-radius: 25px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: 0 0 10px 2px white; /* Для Safari и Chrome */
+	-moz-box-shadow: 0 0 10px 2px white; /* Для Firefox */
+	box-shadow: 0 0 10px 2px #CECECE; /* CSS3 */
+	/* /box-shadow */
+}
+#slides a img
+{	
+	margin: 0;
+	padding: 0;
+	
+	border: none;
+}
+#slides a img:hover
+{
+	/* opacity: 0.3; */
+}
+
+.slides_container
+{
+	width: 1068px;
+	height: 548px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	
+	margin: 0px;
+	padding: 0px;
+	
+	border: 1px solid #EEEEEE;
+	
+	/* border-radius */
+	-webkit-border-radius: 20px; /* Для Safari, Chrome, iOS */
+	-moz-border-radius: 20px; /* Для Firefox */
+	border-radius: 20px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: 0 0 5px 1px #666666; /* Для Safari и Chrome */
+	-moz-box-shadow: 0 0 5px 1px #666666; /* Для Firefox */
+	box-shadow: 0 0 5px 1px #666666; /* CSS3 */
+	/* /box-shadow */
+}
+.slides_container div.slide
+{
+	width: 1080px;
+	height: 560px;
+	display: block;
+	
+	margin: 0px;
+	padding: 0px;
+}
+.slides_container div.slide img
+{
+	width: 1080px;
+	height: 560px;
+	display: block;
+	
+	margin: 0px;
+	padding: 0px;
+}
+/* /Slideshow */
+
+/* Next/prev buttons */
+#slides .next, #slides .prev
+{
+	position: absolute;
+	top: 255px;
+	
+	width: 50px;
+	height: 50px;
+
+	border: 0 none;
+	display: block;
+	opacity: 0.75;
+	z-index: 101;
+	
+	/* transition */
+	-webkit-transition: all 0.1s linear; /* Safari и Chrome */
+	-moz-transition: all 0.1s liner; /* Firefox */
+	-o-transition: all 0.1s liner; /* Opera */
+	transition: all 0.1s liner; /* CSS3 */
+	/* /transition */
+}
+#slides .prev
+{
+	left: -52px;
+}
+#slides .next
+{
+	left: 1072px;
+}
+#slides .next:hover,#slides .prev:hover
+{
+	opacity: 1;
+}
+#slides .next:active,#slides .prev:active
+{
+	opacity: 0.5;
+}
+/* /Next/prev buttons */
+
+/* Pagination */
+.pagination
+{
+	position: absolute;
+	margin: -20px 0 0 440px;
+	
+	z-index: 603;
+}
+.pagination li
+{
+	float: left;
+	margin:0 1px;
+	list-style:none;
+}
+.pagination li a
+{
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(images/main_slider/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+.pagination li.current a
+{
+	background-position:0 -12px;
+}
+/* /Pagination */
+
+/* Caption */
+.caption
+{
+	position: absolute;
+	left: 0px;
+	z-index: 500;
+	
+	height: 30px;
+	/* width: 1020px; */
+	width: auto;
+	
+	margin: 20px 10px 24px 14px;
+	padding: 2px 15px 2px 15px;
+	
+	background: rgba(119,119,119, 0.7);
+	/* background: rgba(68,85,102, 0.7); */
+	
+	border-top: 1px solid #000;
+	
+	/* border-radius */
+	-webkit-border-radius: 50px 12px 50px 12px; /* Для Safari, Chrome, iOS */
+	-moz-border-radius: 50px 12px 50px 12px; /* Для Firefox */
+	border-radius: 50px 12px 50px 12px; /* CSS3 */
+	/* /border-radius */
+
+	/* box-shadow */
+	-moz-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Для Firefox */
+	-webkit-box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* Для Safari и Chrome */
+	box-shadow: inset 0 0 6px 4px rgba(34,34,34, 0.7); /* CSS3 */
+	/* /box-shadow */
+	
+	font-size: larger;
+	font-style: oblique;
+	color: #EEEEEE;
+	text-shadow: 2px 2px 0 rgba(0,0,0, 0.8);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: url(/highslide/graphics/zoomin.cur), pointer !important;
+}
+.caption p
+{
+	margin-top: 2px;
+}
+/* /Caption */
+
+/* Anchors */
+/*
+.slide a:link,.slide a:visited {
+	color:#599100;
+	text-decoration:none;
+}
+
+.slide a:hover,.slide a:active {
+	color:#599100;
+	text-decoration:underline;
+}
+*/

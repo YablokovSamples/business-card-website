@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap {height:auto !important;height:100%;min-height:100%;position:relative;width:990px;margin:0 auto -154px;background:#102930;}
+
+/* #head-dumm {height:140px} */
+#glide-box {height:440px;position:relative;}
+#glide-box a.left-button {display:block;position:absolute;width:60px;height:60px;top:156px;left:-12px;background:url(left_button.png) 0 0 no-repeat;}
+#glide-box a.right-button {display:block;position:absolute;width:60px;height:60px;top:156px;right:-12px;background:url(right_button.png) 0 0 no-repeat;}
+#glide-box div.steps {width:478px;height:35px;position:absolute;left:0;top:343px}
+#glide-box div.steps a {position:absolute;display:block;width:35px;height:35px;top:0}
+#glide-box div.steps a.current {background:url(step_six.png) 0 0 no-repeat;left:386px}
+#glide-box div.steps div.s {background:url(step.png) 0 0 no-repeat;left:17px;position:absolute;display:block;width:35px;height:35px;top:0}
+#glide-box div.steps a.s1 {background:url(step_one.png) 0 0 no-repeat;left:87px}
+#glide-box div.steps a.s2 {background:url(step_two.png) 0 0 no-repeat;left:157px}
+#glide-box div.steps a.s3 {background:url(step_three.png) 0 0 no-repeat;left:217px}
+#glide-box div.steps a.s4 {background:url(step_four.png) 0 0 no-repeat;left:274px}
+#glide-box div.steps a.s5 {background:url(step_five.png) 0 0 no-repeat;left:330px}
+#glide-box div.steps a.s6 {background:url(step_six.png) 0 0 no-repeat;left:386px}
+#glide-box div.steps a.s7 {background:url(step_seven.png) 0 0 no-repeat;left:443px}
+
+#glide-box div.inn {height:440px;width:990px;overflow:hidden}
+#glide-line {width:50000px;padding:0;margin:0;list-style:none;height:440px}
+#glide-line li {height:440px;width:990px;float:left}
+#glide-line li.step_one {background:url(pic_one.jpg) 0 0 no-repeat}
+#glide-line li.step_two {background:url(pic_two.jpg) 0 0 no-repeat}
+#glide-line li.step_three {background:url(pic_three.jpg) 0 0 no-repeat}
+#glide-line li.step_four {background:url(pic_four.jpg) 0 0 no-repeat}
+#glide-line li.step_five {background:url(pic_five.jpg) 0 0 no-repeat}
+#glide-line li.step_six {background:url(pic_six.jpg) 0 0 no-repeat}
+#glide-line li.step_seven {background:url(pic_seven.jpg) 0 0 no-repeat}
+
+#box-cont {}
+#l-side {float:left;width:560px;padding:24px 0 30px 45px;line-height:17px; font: normal 14px/20px Arial;}
+#l-side h1 {margin-bottom:25px}
+#r-side {float:right;width:285px;padding:0 36px 30px 0; position: relative;}
+
+#r-side h2 {display:block; height: 40px; margin: 0 0 20px 0; width:285px; overflow:hidden; text-indent:-999px; background:url(news.jpg) 0 0 no-repeat}
+
+#r-side span.date {display:block;font-size:11px;color:#D9FB59;padding-bottom:8px}
+#r-side a.anonce {font-size:12px;color:#90B3BB;text-decoration:none;display:block;padding-bottom:20px}
+#r-side a.anonce:hover {color:#90B3BB;text-decoration:none}
+#r-side a.portfolio {display: block; position: absolute; top: -100px; margin: 0 0 40px -40px;}
+
+div.clear {clear:both;line-height:0;font-size:0;height:0}
+
+#steps {padding: 5px 0 10px 57px; margin:0; list-style:none;  background: url(steps.gif) 1px 8px no-repeat}
+#steps li {padding: 5px 0;}
+
+/* logos slider */
+#logos_slider { clear: both; height: 80px; background: url(f_bg.jpg) no-repeat center top; position: relative; padding: 0 40px; margin: -5px auto 5px;}
+#logos_slider h2 { margin: 10px 0 0 0; padding: 22px 0 9px;}
+#logos_slider .logos { min-height: 0; position: relative; margin-top: -34px;}
+#logos_slider .logos_inner { width: 100%; height: 106px; position: relative; overflow: hidden;}
+#logos_slider .left_arr,
+#logos_slider .right_arr { position: absolute; top: 10px; left: -33px; width: 16px; height: 27px; background: url(images/ticker/logos_slider_arr.png) no-repeat 0 0; cursor: pointer !important; z-index: 1;}
+#logos_slider .right_arr { left: auto; right: -23px; background-position: -26px 0;}
+#logos_slider .play_pause { font-size: 12px; color: #FFF; position: absolute; top: 4px; right: 0; z-index: 1; cursor: pointer; text-shadow: 0 0 5px #000; visibility: hidden;}
+#logos_slider .logos_inner ul { margin: 0; padding: 0; list-style: none; position: absolute; height: 100%; width: 2000px; vertical-align: bottom; font-size: 0; line-height: 0;}
+#logos_slider .logos_inner li { margin: 0 40px 0 0; padding: 0; float: left;}
+#logos_slider .logos_inner a { display: inline-block;}
+#logos_slider .logos_inner img { border: none; display: block;}
+
+#box-cont {
+	min-height: 480px;
+}

@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Услуги по проектированию гражданских зданий и сооружений в 3D, оформлению интерьеров и экстерьеров любой сложности и любого стиля: «Хай-Тек», «Ар-Деко», «Модерн», «Классицизм», «Китч», «Минимализм», «Техно», «Поп-Арт». Дизайнерское сопровождение на протяжении всего проекта" />
+	<meta name="keywords" content="услуги ремонта и проектирования, проектирование квартир, проектирование домов, ремонт квартир, ремонт домов, 3d моделирование" />
+
+	<title>Архитектура в 3D-моделирвоании</title>
+
+	<!-- ico -->
+	<link rel="shortcut icon" href="css/images/general/icon/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="css/images/general/icon/favicon.ico" />
+
+	<!-- css-base -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/table.css" />
+	<link rel="stylesheet" type="text/css" href="css/bubble.css" />
+
+	<!-- js-base -->
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- main_slider -->
+	<link rel="stylesheet" href="css/main_slider.css" />	
+	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript"><!-- images-with-captions -->
+		$(function()
+		{
+			$('#slides').slides(
+			{
+				preload: true,
+				preloadImage: 'css/images/main_slider/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current)
+				{
+					$('.caption').animate(
+					{
+						bottom: -60
+					}, 100);
+					if (window.console && console.log) // example return of current slide number
+					{
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current)
+				{
+					$('.caption').animate(
+					{
+						bottom: 0
+					}, 200);
+					if (window.console && console.log) // example return of current slide number
+					{
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function()
+				{
+					$('.caption').animate(
+					{
+						bottom: 0
+					}, 200);
+				}
+			});
+		});
+	</script>
+	<!--/main_slider -->
+
+	<!-- Подключаем библиотеку HighSlide -->
+	<script type="text/javascript" src="highslide/highslide-with-gallery.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+	<![endif]-->
+	<script type="text/javascript">
+		hs.graphicsDir = 'highslide/graphics/';
+		hs.align = 'center';
+		hs.transitions = ['expand', 'crossfade'];
+		hs.outlineType = 'rounded-dark';
+		// hs.captionEval = 'this.a.title';
+		//hs.fadeInOut = true;
+		hs.outlineType = 'glossy-dark';
+		hs.wrapperClassName = 'dark';
+		hs.numberPosition = 'caption';
+		hs.dimmingOpacity = 0.75;
+	
+		// Add the slideshow providing the controlbar and the thumbstrip
+		hs.addSlideshow
+		({
+			//slideshowGroup: 'group1',
+			interval: 5000,
+			repeat: false,
+			useControls: true,
+			fixedControls: 'fit',
+			overlayOptions: {
+				position: 'bottom center',
+				opacity: 0.75,
+				hideOnMouseOut: true
+			},
+			thumbstrip: {
+				position: 'above',
+				mode: 'horizontal',
+				relativeTo: 'expander'
+			}
+		});
+	</script>
+	<style type="text/css">
+		.highslide img
+		{
+			border-radius: 80px 12px 50px 12px;
+			
+			-webkit-border-top-right-radius: 12px 6px;
+			-moz-border-top-right-radius: 12px 6px;
+			border-top-right-radius: 12px 6px;
+			
+			-webkit-border-bottom-left-radius: 12px 6px;
+			-moz-border-bottom-left-radius: 12px 6px;
+			border-bottom-left-radius: 12px 6px;
+			
+			cursor: url(../highslide/graphics/zoomin.cur), pointer !important;
+		}
+	</style>
+	<!--/Подключаем библиотеку HighSlide -->
+
+    <!-- Плавная прокрутка -->
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		// hide #back-top first
+		$("#back-top").hide();
+		
+		// fade in #back-top
+		$(function ()
+		{
+			$(window).scroll(function()
+			{
+				if ($(this).scrollTop() >100)
+				{
+					$('#back-top').fadeIn();
+				}
+				else
+				{
+					$('#back-top').fadeOut();
+				}
+			});
+		
+			// scroll body to 0px on click
+			$('#back-top a').click(function()
+			{
+				$('body,html').animate(
+				{
+					scrollTop: 0
+				}, 800);
+				
+				return false;
+			});
+		});
+	});
+	
+	$(document).ready(function()
+	{
+		$( 'a[href^=#list]' ).click(function ()
+		{
+			var id = $( this ).attr( 'href' ).match( /#.+$/ )[0].substr(1);
+			var offsetTop = $("a[name='"+ id + "']").offset().top;
+			$('body,html').animate({scrollTop:offsetTop}, 500);
+			
+			return false;
+		});
+	});
+	</script>
+	<!--/Плавная прокрутка -->
+
+	<!-- Плавное появление страницы -->
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $("body").css("display","none").fadeIn(800);
+		});
+	</script>
+	<!--/Плавное появление страницы -->
+
+	<!-- Подключаем систему поиска Google -->
+	<script type="text/javascript">
+		(function()
+		{
+			var cx = '005306215916933014822:fqwd_wlcggc';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		})();
+	</script>
+	<!--/Подключаем систему поиска Google -->
+
+	<!-- Запрет на выделение текста -->
+	<script type="text/javascript">
+		document.ondragstart = noselect; 
+		// запрет на перетаскивание 
+		document.onselectstart = noselect; 
+		// запрет на выделение элементов страницы 
+		document.oncontextmenu = noselect; 
+		// запрет на выведение контекстного меню 
+		function noselect() {return false;} 
+	</script>
+	<!--/Запрет на выделение текста -->
+	
+	<!-- Личные настройки страницы -->
+	<style type="text/css">
+		div.galleryAndHeader h1
+		{
+			text-align: center;
+			margin: 0 0 2px 30px;
+		}
+		div.galleryAndHeader table
+		{
+			margin: 0 auto;
+			border: none;
+			border-spacing: 6px;
+			
+			text-align: center;
+			margin-top: -10px;
+		}
+	</style>
+	<!--/Личные настройки страницы -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/Organization">
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter27807312 = new Ya.Metrika({id:27807312,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div>
+		<img src="//mc.yandex.ru/watch/27807312" style="position:absolute; left:-9999px;" alt="" />
+	</div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	
+	<!-- Rating@Mail.ru counter -->
+	<script type="text/javascript">
+	var _tmr = _tmr || [];
+	_tmr.push({id: "2597101",  type: "pageView", start: (new Date()).getTime()});
+	(function (d, w) {
+	   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+	   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+	   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+	   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+	})(document, window);
+	</script><noscript><div style="position:absolute;left:-10000px;">
+		<img src="//top-fwz1.mail.ru/counter?id=2597101;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+	</div></noscript>
+	<!-- /Rating@Mail.ru counter -->
+	
+	<div id="container"><!-- head -->
+		<div id="summary">
+			<p class="header_slider" itemprop="name">АртДизайнПроект</p>
+			<!-- <img src="css/images/main_slider/new-ribbon.png" id="ribbon" width="112" height="112" alt="Ленточка NEW" /> -->
+			<div id="slides">
+				<div class="slides_container">
+					<div class="slide">
+						<a href="#" title=""><img src="images/apartments/living_rooms/7.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Гостиная</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/apartments/baths/13.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Ванна</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/apartments/bedrooms/8.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Спальня</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/apartments/kitchens/1.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Кухня</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/apartments/hallways/1.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Прихожая</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/office_solutions/6.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Офисные решения</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/office_solutions/7.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Офисные решения</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/office_solutions/11.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Офисные решения</p>
+						</div>
+					</div>
+					<div class="slide">
+						<a href="#" title=""><img src="images/architecture/6.jpg" alt="" /></a>
+						<div class="caption">
+							<p>Архитектура</p>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="prev"><img src="css/images/main_slider/arrow-prev.png" width="50px" height="50px" alt="Назад" /></a>
+				<a href="#" class="next"><img src="css/images/main_slider/arrow-next.png" width="50px" height="50px" alt="Вперед" /></a>
+			</div>
+		</div>
+	</div><!-- /head -->
+	
+	<div class="clear"></div>
+	
+	<ul id="menu">
+		<li class="left"><a href="index.html">Главная</a></li>
+		<li class="left"><a href="doors.html">Двери "Дверцог"</a></li>
+		<li class="left"><a href="types_of_design.html">Виды дизайна</a></li>
+		<li class="center"><a href="#">3D-моделирование</a>
+        	<ul>
+				<li><a href="3d_modeling_architecture.html">Архитектура</a></li>
+				<li><a href="3d_modeling_apartments.html">Отделка квартир</a></li>
+				<li><a href="3d_modeling_office_solutions.html">Офисные решения</a></li>
+			</ul>
+		</li>
+		<li class="right"><a href="repair.html">Ремонт</a></li>
+		<li class="right"><a href="repair_stages.html">Этапы ремонта</a></li>
+		<li class="right"><a href="contacts.html">Контакты</a></li>
+	</ul><!--/menu -->
+	
+	<div class="clear"></div>
+	
+	<div id="main">
+		<div id="content">
+		
+			<figure class="page_header">
+				<span class="signature">
+					<a href="images/general/label/1.png" class="highslide" onclick="return hs.expand(this)" onMouseOver="tool_tip('Signature')" onMouseOut="tool_tip()">
+						<img src="images/general/label/thumb/1.png" class="label" style="height: auto; width:auto; border: none; border-radius: 0;" alt="" />
+					</a>
+				</span>
+				<figtext>Архитектура</figtext>
+				<span class="search">
+					<gcse:search></gcse:search>
+				</span>
+			</figure><!--/page_header -->
+			
+			<h2>Немного о нашем подходе к делу</h2>
+			
+			<h4>Рациональность и разумность, вот о чем необходимо думать архитектору в работе над каждым новым проектом. Главным критерием в решении вопроса для нас является безопасность эксплуатации будущего объекта строительства. Экономия ресурсов, экологичность материалов и гармония с окружающей средой и человеком. Индивидуальная простота архитектурного решения фасадов и комфортабельность планировки заинтересуют желающих обзавестись загородным домом.</h4>
+			<h4>Наша компания занимается не просто архитектурным проектированием, а архитектурно-строительным проектированием.</h4>
+
+			<h4>Стадии архитектурного проектирования:</h4>
+			<ul class="indented">
+				<li itemprop="makesOffer">трехмерная визуализация дома;</li>
+				<li itemprop="makesOffer">ведомость чертежей;</li>
+				<li itemprop="makesOffer">пояснительная записка;</li>
+				<li itemprop="makesOffer">личное сопровождение архитектора и инженера.</li>
+			</ul>
+
+			<h4>Наши приоритеты:</h4>
+			<ul class="indented">
+				<li>безопасность;</li>
+				<li>красота;</li>
+				<li>экологичность.</li>
+			</ul>
+			
+			<h4>Приглашаем Вас в галерею ознакомиться с одним из проектов.</h4>
+			
+			<div class="galleryAndHeader"><!-- galleryAndHeader -->
+				<table>
+					<tr>
+						<td>
+							<h1>Галерея</h1>
+							<div class="highslide-gallery"><!-- gallery -->
+								<a class="highslide" id="thumb1" href="images/architecture/1.jpg" onclick="return hs.expand(this, { slideshowGroup: 1 })" onMouseOver="tool_tip('Архитектура')" onMouseOut="tool_tip()" itemprop="image">
+									<img src="images/architecture/thumb/1.jpg" class="cover" alt="" />
+								</a>
+								<div class="hidden-container">
+									<a class="highslide" href="images/architecture/2.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/2.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/3.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/3.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/4.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/4.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/5.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/5.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/6.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/6.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/7.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/7.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/8.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/8.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/9.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/9.jpg" alt="" />
+									</a>
+									<a class="highslide" href="images/architecture/10.jpg" title="" onclick="return hs.expand(this, { thumbnailId: 'thumb1', slideshowGroup: 1 })" itemprop="image">
+										<img src="images/architecture/thumb/10.jpg" alt="" />
+									</a>
+								</div>
+							</div><!--/gallery -->
+						</td>
+					</tr>
+				</table>
+			</div><!--/galleryAndHeader -->
+			
+			<h4 style="display: none;" itemprop="telephone">+7 911 760-65-81</h4>
+			<h4 style="display: none;" itemprop="address">г. Санкт-Петербург, Выборгское шоссе 15</h4>
+			
+		</div> <!-- /content -->
+	</div> <!-- /main -->
+	
+	<div class="clear"></div>
+
+	<div id="footer">
+		<figure class="page_footer">
+			<a href="mailto:partner4345@yandex.ru" title="Связаться по электронной почте" itemprop="email">
+				<span class="mail"></span>
+			</a>
+			
+			<!-- Yandex.Metrika informer -->
+			<!-- <a href="https://metrika.yandex.ru/stat/?id=27807312&amp;from=informer" target="_blank" rel="nofollow" class="counter_left"> -->
+				<!-- <img src="//bs.yandex.ru/informer/27807312/3_0_DBDBDBFF_BBBBBBFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:27807312,lang:'ru'});return false}catch(e){}"/> -->
+			<!-- </a> -->
+			<!-- /Yandex.Metrika informer -->
+		
+			<figtext></figtext>
+			
+			<!-- Rating@Mail.ru logo -->
+			<!-- <a target="_blank" href="http://top.mail.ru/jump?from=2597101" class="counter_right"> -->
+				<!-- <img src="//top-fwz1.mail.ru/counter?id=2597101;t=465;l=1" border="0" height="31" width="88" alt="Рейтинг@Mail.ru"> -->
+			<!-- </a> -->
+			<!-- /Rating@Mail.ru logo -->
+			
+			<a href="skype:ArtDizainProekt?chat" title="Связаться через skype">
+				<span class="skype"></span>
+			</a>
+		</figure>
+	</div><!--/footer -->
+
+	<div class="clear"></div>
+
+	<p id="back-top">
+		<a href="#top"><span></span>Вверх</a>
+	</p>
+	<div id="float_tip"></div>
+
+</body>
+</html>

@@ -1,0 +1,695 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Bubble */
+div#beaker
+{
+	position: absolute;
+	margin-left: 1160px;
+}
+
+/* 1 */
+div#beaker span.bubble
+{
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: absolute;
+	
+	/* background */
+	background-image: -ms-radial-gradient( /* IE10 Consumer Preview */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: radial-gradient( /* W3C Markup, IE10 Release Preview */
+		circle closest-corner at center,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -moz-radial-gradient( /* Mozilla Firefox */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -o-radial-gradient( /* Opera */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -webkit-radial-gradient( /* Webkit (Chrome 11+) */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background: -webkit-gradient( /* Safari and Chrome */
+		radial,
+		center center, 0,
+		center center, 100,
+		from(rgba(68,68,68, 0.3)),
+		to(rgba(255,255,255, 0.7))
+	);
+	/* /background */
+	
+	/* border-radius */
+	-webkit-border-radius: 200px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 200px; /* Firefox */
+	border-radius: 200px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: bubbleFloat;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: bubbleFloat;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+div#beaker span.glow
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	
+	/* border-radius */
+	-webkit-border-radius: 200px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 200px; /* Firefox */
+	border-radius: 200px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: grayPulse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: grayPulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+@-webkit-keyframes bubbleFloat /* Safari and Chrome */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: linear;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: linear;
+	}
+	30%
+	{
+		opacity: 1;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.8);
+		-webkit-animation-timing-function: linear;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 600px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: linear;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 650px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: linear;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 650px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: linear;
+	}
+}
+@keyframes bubbleFloat /* Others */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: linear;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: linear;
+	}
+	30%
+	{
+		opacity: 1;
+		bottom: 0px;
+		
+		transform: scale(.8);
+		animation-timing-function: linear;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 600px;
+		
+		transform: scale(.3);
+		animation-timing-function: linear;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 650px;
+		
+		transform: scale(1.2);
+		animation-timing-function: linear;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 650px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: linear;
+	}
+}
+
+@-webkit-keyframes grayPulse /* Safari and Chrome */
+{
+	from
+	{
+		-webkit-box-shadow: 0 0 30px 2px #777777;
+	}
+	50%
+	{
+		-webkit-box-shadow: 0 0 80px 2px #777777;
+	}
+	to
+	{
+		-webkit-box-shadow: 0 0 30px 2px #777777;
+	}
+}
+@keyframes grayPulse /* Others */
+{
+	from
+	{
+		-moz-box-shadow: 0 0 30px 2px #777777; /* Firefox */
+		box-shadow: 0 0 30px 2px #777777; /* CSS3 */
+	}
+	50%
+	{
+		-moz-box-shadow: 0 0 80px 2px #777777; /* Firefox */
+		box-shadow: 0 0 80px 2px #777777; /* CSS3 */
+	}
+	to
+	{
+		-moz-box-shadow: 0 0 30px 2px #777777; /* Firefox */
+		box-shadow: 0 0 30px 2px #777777; /* CSS3 */
+	}
+}
+
+/* 2 */
+div#beaker span.bubble2
+{
+	width: 70px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	
+	/* background */
+	background-image: -ms-radial-gradient( /* IE10 Consumer Preview */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: radial-gradient( /* W3C Markup, IE10 Release Preview */
+		circle closest-corner at center,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -moz-radial-gradient( /* Mozilla Firefox */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -o-radial-gradient( /* Opera */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -webkit-radial-gradient( /* Webkit (Chrome 11+) */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background: -webkit-gradient( /* Safari and Chrome */
+		radial,
+		center center, 0,
+		center center, 100,
+		from(rgba(68,68,68, 0.3)),
+		to(rgba(255,255,255, 0.7))
+	);
+	/* /background */
+	
+	/* border-radius */
+	-webkit-border-radius: 140px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 140px; /* Firefox */
+	border-radius: 140px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: bubbleFloat2;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: bubbleFloat2;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+div#beaker span.glow2
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	
+	/* border-radius */
+	-webkit-border-radius: 140px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 140px; /* Firefox */
+	border-radius: 140px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: grayPulse2;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: grayPulse2;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+@-webkit-keyframes bubbleFloat2 /* Safari and Chrome */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	30%
+	{
+		bottom: 0px;
+		-webkit-transform: scale(.8);
+		opacity: 1;
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 560px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 620px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 620px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+}
+@keyframes bubbleFloat2 /* Others */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	30%
+	{
+		opacity: 1;
+		bottom: 0px;
+		
+		transform: scale(.8);
+		animation-timing-function: ease-in-out;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 560px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 620px;
+		
+		transform: scale(1.2);
+		animation-timing-function: ease-in-out;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 620px;
+		
+		transform: scale(1.2);
+		animation-timing-function: ease-in-out;
+	}
+}
+
+@-webkit-keyframes grayPulse2 /* Safari and Chrome */
+{
+	from
+	{
+		-webkit-box-shadow: 0 0 5px 1px #777777;
+	}
+	50%
+	{
+		-webkit-box-shadow: 0 0 10px 1px #777777;
+	}
+	to
+	{
+		-webkit-box-shadow: 0 0 5px 1px #777777;
+	}
+}
+@keyframes grayPulse2 /* Others */
+{
+	from
+	{
+		-moz-box-shadow: 0 0 5px 1px #777777; /* Firefox */
+		box-shadow: 0 0 5px 1px #777777; /* CSS3 */
+	}
+	50%
+	{
+		-moz-box-shadow: 0 0 10px 1px #777777; /* Firefox */
+		box-shadow: 0 0 10px 1px #777777; /* CSS3 */
+	}
+	to
+	{
+		-moz-box-shadow: 0 0 5px 1px #777777; /* Firefox */
+		box-shadow: 0 0 5px 1px #777777; /* CSS3 */
+	}
+}
+/* /2 */
+
+/* 3 */
+div#beaker span.bubble3
+{
+	width: 50px;
+	height: 50px;
+	display: block;
+	position: absolute;
+	
+	/* background */
+	background-image: -ms-radial-gradient( /* IE10 Consumer Preview */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: radial-gradient( /* W3C Markup, IE10 Release Preview */
+		circle closest-corner at center,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -moz-radial-gradient( /* Mozilla Firefox */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -o-radial-gradient( /* Opera */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background-image: -webkit-radial-gradient( /* Webkit (Chrome 11+) */
+		center,
+		circle closest-corner,
+		rgba(68,68,68, 0.3) 0%,
+		rgba(255,255,255, 0.7) 100%
+	);
+	background: -webkit-gradient( /* Safari and Chrome */
+		radial,
+		center center, 0,
+		center center, 100,
+		from(rgba(68,68,68, 0.3)),
+		to(rgba(255,255,255, 0.7))
+	);
+	/* /background */
+	
+	/* border-radius */
+	-webkit-border-radius: 100px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 100px; /* Firefox */
+	border-radius: 100px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: bubbleFloat3;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: bubbleFloat3;
+	-webkit-animation-duration: 7s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+div#beaker span.glow3
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	
+	/* border-radius */
+	-webkit-border-radius: 100px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 100px; /* Firefox */
+	border-radius: 100px; /* CSS3 */
+	/* /border-radius */
+	
+	/* animation */
+	/* Others */
+	animation-name: grayPulse3;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	/* Safari and Chrome */
+	-webkit-animation-name: grayPulse3;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	/* /animation */
+}
+@-webkit-keyframes bubbleFloat3 /* Safari and Chrome */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	30%
+	{
+		opacity: 1;
+		bottom: 0px;
+		
+		-webkit-transform: scale(.8);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 500px;
+		
+		-webkit-transform: scale(.3);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 600px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 600px;
+		
+		-webkit-transform: scale(1.2);
+		-webkit-animation-timing-function: ease-in-out;
+	}
+}
+@keyframes bubbleFloat3 /* Others */
+{
+	from
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	1%
+	{
+		opacity: 0;
+		bottom: 0px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	30%
+	{
+		opacity: 1;
+		bottom: 0px;
+		
+		transform: scale(.8);
+		animation-timing-function: ease-in-out;
+	}
+	95%
+	{
+		opacity: 1;
+		bottom: 500px;
+		
+		transform: scale(.3);
+		animation-timing-function: ease-in-out;
+	}
+	99%
+	{
+		opacity: 0;
+		bottom: 600px;
+		
+		transform: scale(1.2);
+		animation-timing-function: ease-in-out;
+	}
+	to
+	{
+		opacity: 0;
+		bottom: 600px;
+		
+		transform: scale(1.2);
+		animation-timing-function: ease-in-out;
+	}
+}
+
+@-webkit-keyframes grayPulse3 /* Safari and Chrome */
+{
+	from
+	{
+		-webkit-box-shadow: 0 0 5px 1px #777777;
+	}
+	50%
+	{
+		-webkit-box-shadow: 0 0 10px 1px #777777;
+	}
+	to
+	{
+		-webkit-box-shadow: 0 0 5px 1px #777777;
+	}
+}
+@keyframes grayPulse3 /* Others */
+{
+	from
+	{
+		-moz-box-shadow: 0 0 5px 1px #777777; /* Firefox */
+		box-shadow: 0 0 5px 1px #777777; /* CSS3 */
+	}
+	50%
+	{
+		-moz-box-shadow: 0 0 10px 1px #777777; /* Firefox */
+		box-shadow: 0 0 10px 1px #777777; /* CSS3 */
+	}
+	to
+	{
+		-moz-box-shadow: 0 0 5px 1px #777777; /* Firefox */
+		box-shadow: 0 0 5px 1px #777777; /* CSS3 */
+	}
+}
+/* /3 */
+/* /Bubble */
+
+/* Use: */
+/*
+	<div id="beaker">
+		<span class="bubble">
+			<span class="glow"> </span>
+		</span>
+	</div>
+*/

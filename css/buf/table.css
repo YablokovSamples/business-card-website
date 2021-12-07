@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Table */
+ul.peri-boxes
+{
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+ul.peri-boxes li
+{
+	float: left;
+	width: 100px;
+	height: 52px;
+	margin: 0px;
+	list-style: none;
+}
+
+ul.peri-boxes li a
+{
+	float: left;
+	width: 100px;
+	height: 37px;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+ul.peri-boxes li a.box
+{ 
+	background-color: #1b2a34; 
+	color: #fff; 
+	font-weight: bold; 
+	text-align: center; 
+	vertical-align: middle; 
+	padding-top: 15px; 
+	left:0px; 
+	top:0px; 
+	position: relative;
+	cursor: url(/highslide/graphics/zoomin.cur), pointer !important;
+	
+	border: 1px solid #000;
+	text-shadow: 0 -1px #000;
+	
+	/* border-radius */
+	-webkit-border-radius: 0px; /* Safari, Chrome, iOS */
+	-moz-border-radius: 0px; /* Firefox */
+	border-radius: 0px; /* CSS3 */
+	/* /border-radius */
+	
+	/* box-shadow */
+	-webkit-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000; /* Safari и Chrome */
+	-moz-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000; /* Firefox */
+	box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000; /* CSS3 */
+	/* /box-shadow */
+	
+	/* transition */
+	-webkit-transition: all 0.12s ease-out; /* Safari and Chrome */
+	-moz-transition: all 0.12s ease-out; /* Firefox */
+	-o-transition: all 0.12s ease-out; /* Opera */
+	transition: all 0.12s ease-out; /* CSS3 */
+	/* /transition */
+}
+
+ul.peri-boxes li a.box:hover
+{
+	color: white;
+	
+	overflow: auto;
+	padding: 4px 10px 4px 10px;	
+	
+	/* box-shadow */
+	-webkit-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Safari и Chrome */
+	-moz-box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* Firefox */
+	box-shadow: inset 0 0 6px 1px #444444, 0 0 12px 2px #444444; /* CSS 3.0 */
+	/* /box-shadow */
+	
+	/* background */
+	background: -webkit-gradient(linear, 0 0, 0 90%, from(#999999), to(#000000)); /* Safari и Chrome */
+	background: -moz-linear-gradient(top, #999999, #000000 90%); /* Firefox */
+	background: -o-linear-gradient(top, #999999, #000000 90%); /* Opera */
+	background: -ms-linear-gradient(top, #999999, #000000 90%); /* IE10 */
+	background: linear-gradient(top, #999999, #000000 90%); /* CSS3 */
+	/* /background */
+	
+	left:-18px;
+	top:-18px; 
+	width: 100px; 
+	height: 47px;
+	font-size: 1.5em;
+	z-index: 1;
+	
+	/* animation */
+	/* Others */
+	animation-name: boxPulse;
+	animation-duration: .7s;
+	animation-iteration-count: infinite;
+	animation-delay: .12s;
+	/* Safari and Chrome */
+	-webkit-animation-name: boxPulse;
+	-webkit-animation-duration: .7s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: .12s;
+	/* /animation */
+}
+
+@-webkit-keyframes boxPulse /* Safari and Chrome */
+{
+	from
+	{
+		width: 104px;
+		height: 47px;
+		left: -23px;
+		top: -23px;
+		
+		-webkit-animation-timing-function: ease-out;
+	}
+	50%
+	{
+		width: 100px;
+		height: 45px;
+		top: -19px;
+	}
+	to
+	{
+		width: 104px;
+		height: 47px;
+		left: -23px;
+		top: -23px;
+		
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+
+@keyframes boxPulse /* Others */
+{
+	from
+	{
+		width: 104px;
+		height: 47px;
+		left: -23px;
+		top: -23px;
+		
+		animation-timing-function: ease-out;
+	}
+	50%
+	{
+		width: 100px;
+		height: 45px;
+		top: -19px;
+	}
+	to
+	{
+		width: 104px;
+		height: 47px;
+		left: -23px;
+		top: -23px;
+		
+		animation-timing-function: ease-out;
+	}
+}
+/* /Table */
+
+/* Use: */
+/*
+	<ul class="peri-boxes">
+        <li><a href="" class="box">наведите</a></li>
+        <li><a href="" class="box">на</a></li>
+        <li><a href="" class="box">каждый</a></li>
+        <li><a href="" class="box">куб</a></li>
+    </ul>
+*/
+

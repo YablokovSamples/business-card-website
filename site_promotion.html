@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Немного о продвижении сайтов" />
+	<meta name="keywords" content="продвижение сайта, раскрутка сайта, продвижение сайта, spinup" />
+
+	<title>Продвижение сайтов</title>
+
+	<!-- ico -->
+	<link rel="shortcut icon" href="css/images/general/icon/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/general/icon/favicon.ico" />
+
+	<!-- css-base -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/table.css" />
+	<link rel="stylesheet" type="text/css" href="css/bubble.css" />
+
+	<!-- js-base -->
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- main_slider -->
+	<link rel="stylesheet" href="css/main_slider.css" />	
+	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript"><!-- images-with-captions -->
+		$(function()
+		{
+			$('#slides').slides(
+			{
+				preload: true,
+				preloadImage: 'css/images/main_slider/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current)
+				{
+					$('.caption').animate(
+					{
+						bottom: -60
+					}, 100);
+					if (window.console && console.log) // example return of current slide number
+					{
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current)
+				{
+					$('.caption').animate(
+					{
+						bottom: 0
+					}, 200);
+					if (window.console && console.log) // example return of current slide number
+					{
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function()
+				{
+					$('.caption').animate(
+					{
+						bottom: 0
+					}, 200);
+				}
+			});
+		});
+	</script>
+	<!-- /main_slider -->
+
+	<!-- Подключаем библиотеку jQuery Cycle Plugin -->
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+		function()
+		{
+			$('#gallery').cycle(
+			{ 
+				fx: 'custom', 
+				cssBefore:
+				{
+					left: 115,  
+					top: 115,  
+					width: 0,  
+					height: 0,  
+					opacity: 1, 
+					display: 'block' 
+				}, 
+				animOut:
+				{
+					opacity: 0  
+				}, 
+				animIn:
+				{
+					left: 0,  
+					top: 0,
+					height: "356px",   
+					width: "256px"
+				}, 
+				cssAfter:
+				{
+					zIndex: 0 
+				}, 
+				delay: -3000
+			});
+			
+			$('#s1').before('#nav1').cycle(
+			{
+				fx: 'fade', 
+				speed: 'fast', 
+				startingSlide: 3, // zero-based 
+				timeout: 3000, 
+				pager: '#nav', 
+				delay: -2000 
+			});
+			
+			$('#s3').cycle(
+			{
+				fx:     'turnDown', 
+				speed: 300, 
+				timeout: 3000, 
+				next: '#s3', 
+				pause: 1 
+			});
+			
+			$('#slideshow').cycle(
+			{
+				fx: 'shuffle', 
+				next: '#slideshow', 
+				pause: 1
+			});
+		});
+	</script>
+	<!-- /Подключаем библиотеку jQuery Cycle Plugin -->
+
+	<!-- Подключаем библиотеку HighSlide -->
+	<script type="text/javascript" src="highslide/highslide-with-gallery.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+	<![endif]-->
+
+	<script type="text/javascript">
+		hs.graphicsDir = 'highslide/graphics/';
+		hs.align = 'center';
+		hs.transitions = ['expand', 'crossfade'];
+		hs.outlineType = 'rounded-dark';
+		//hs.fadeInOut = true;
+		hs.outlineType = 'glossy-dark';
+		hs.wrapperClassName = 'dark';
+		hs.numberPosition = 'caption';
+		hs.dimmingOpacity = 0.75;
+
+		// Add the controlbar
+		if (hs.addSlideshow) hs.addSlideshow(
+		{
+			interval: 5000,
+			repeat: false,
+			useControls: true,
+			fixedControls: 'fit',
+			overlayOptions:
+			{
+				opacity: .75,
+				position: 'bottom center',
+				hideOnMouseOut: true
+			}
+		});
+	</script>
+	<style type="text/css">
+		.highslide img
+		{
+			border: 0px;
+			cursor: url(highslide/graphics/zoomin.cur), pointer !important;
+		}
+	</style>
+	<!-- /Подключаем библиотеку HighSlide -->
+
+	<!-- Плавная прокрутка -->
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		// hide #back-top first
+		$("#back-top").hide();
+		
+		// fade in #back-top
+		$(function ()
+		{
+			$(window).scroll(function()
+			{
+				if ($(this).scrollTop() >100)
+				{
+					$('#back-top').fadeIn();
+				}
+				else
+				{
+					$('#back-top').fadeOut();
+				}
+			});
+		
+			// scroll body to 0px on click
+			$('#back-top a').click(function()
+			{
+				$('body,html').animate(
+				{
+					scrollTop: 0
+				}, 800);
+				
+				return false;
+			});
+		});
+	});
+	
+	$(document).ready(function()
+	{
+		$( 'a[href^=#list]' ).click(function ()
+		{
+			var id = $( this ).attr( 'href' ).match( /#.+$/ )[0].substr(1);
+			var offsetTop = $("a[name='"+ id + "']").offset().top;
+			$('body,html').animate({scrollTop:offsetTop}, 500);
+			
+			return false;
+		});
+	});
+	</script>
+	<!-- /Плавная прокрутка -->
+
+	<!-- Плавное появление страницы -->
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $("body").css("display","none").fadeIn(800);
+		});
+	</script>
+	<!-- /Плавное появление страницы -->
+
+	<!-- Подключаем систему поиска Google -->
+	<script type="text/javascript">
+		(function()
+		{
+			var cx = '005306215916933014822:fqwd_wlcggc';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		})();
+	</script>
+	<!-- /Подключаем систему поиска Google -->
+
+	<!-- Запрет на выделение текста -->
+	<script type="text/javascript">
+		document.ondragstart = noselect; 
+		// запрет на перетаскивание 
+		document.onselectstart = noselect; 
+		// запрет на выделение элементов страницы 
+		document.oncontextmenu = noselect; 
+		// запрет на выведение контекстного меню 
+		function noselect() {return false;} 
+	</script>
+	<!--/Запрет на выделение текста -->
+	
+	<!-- Личные настройки страницы -->
+    <style type="text/css">
+		.description
+		{
+			color: grey;
+			font-family: Pompadur, 'Comic Sans MS', cursive;
+			font-style: normal;
+			text-align:center;
+		}
+	</style>
+	<!--/Личные настройки страницы -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/Organization">
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter27807312 = new Ya.Metrika({id:27807312,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div>
+		<img src="//mc.yandex.ru/watch/27807312" style="position:absolute; left:-9999px;" alt="" />
+	</div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	
+	<!-- Rating@Mail.ru counter -->
+	<script type="text/javascript">
+	var _tmr = _tmr || [];
+	_tmr.push({id: "2597101",  type: "pageView", start: (new Date()).getTime()});
+	(function (d, w) {
+	   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+	   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+	   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+	   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+	})(document, window);
+	</script><noscript><div style="position:absolute;left:-10000px;">
+		<img src="//top-fwz1.mail.ru/counter?id=2597101;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+	</div></noscript>
+	<!-- /Rating@Mail.ru counter -->
+
+	<div id="head">
+		<figure class="word_header">
+			<figtext itemprop="name">АртДизайнПроект</figtext>
+			<figcaption>
+				<strong>Виды дизайна</strong>
+				Хотите сделать ремонт, но совершенно не разбираетесь в стилях - вы не промахнулись зайдя сюда!
+			</figcaption>
+		</figure>
+	</div><!-- /head -->
+	
+	<div class="clear"></div>
+	
+	<ul id="menu">
+		<li class="left"><a href="index.html">Главная</a></li>
+		<li class="left"><a href="doors.html">Двери "Дверцог"</a></li>
+		<li class="left"><a href="types_of_design.html">Виды дизайна</a></li>
+		<li class="center"><a href="#">3D-моделирование</a>
+        	<ul>
+				<li><a href="3d_modeling_architecture.html">Архитектура</a></li>
+				<li><a href="3d_modeling_apartments.html">Отделка квартир</a></li>
+				<li><a href="3d_modeling_office_solutions.html">Офисные решения</a></li>
+			</ul>
+		</li>
+		<li class="right"><a href="repair.html">Ремонт</a></li>
+		<li class="right"><a href="repair_stages.html">Этапы ремонта</a></li>
+		<li class="right"><a href="contacts.html">Контакты</a></li>
+	</ul><!--/menu -->
+    
+	<div class="clear"></div>
+	
+	<div id="advertising_left">
+		<a href="http://1ps.ru/cost/context/?p=617758">
+			<img src="http://1ps.ru/identic/sertifagent160600.jpg" alt="" class="objectAllocation" />
+		</a>
+	</div>
+	
+	<div id="main">
+    	<div id="content">
+		
+			<figure class="page_header">
+				<span class="signature">
+					<a href="images/general/label/1.png" class="highslide" onclick="return hs.expand(this)" onMouseOver="tool_tip('Signature')" onMouseOut="tool_tip()">
+						<img src="images/general/label/thumb/1.png" class="label" style="height: auto; width:auto; border: none; border-radius: 0;" alt="" />
+					</a>
+				</span>
+				<figtext>Виды дизайна</figtext>
+				<span class="search">
+					<gcse:search></gcse:search>
+				</span>
+			</figure><!--/page_header -->
+			
+			<h2>Содержание:</h2>
+			<ol class="indented" start="0">
+				<li><a href="#list1" class="text">Зачем нужна регистрация в каталогах через 1PS.RU?</a></li>
+				<li><a href="#list2" class="text">Почему с 1PS.RU быстрее?</a></li>
+				<li><a href="#list3" class="text">Почему с 1PS.RU надежнее?</a></li>
+				<li><a href="#list4" class="text">Сколько стоит регистрация в каталогах через 1PS.RU?</a></li>
+			</ol>
+            
+			
+			<h2 class="list"><a name="list1">Зачем нужна регистрация в каталогах через 1PS.RU?</a></h2>
+			<h4>Зачем нужно регистрировать сайт в каталогах? Причин несколько:</h4>
+			<ul class="indented">
+				<li>Дополнительные посетители на Ваш сайт из каталогов.</li>
+				<li>Больше ссылок на Ваш сайт, что влияет на позиции в поисковике.</li>
+				<li>Ссылки из каталогов – тематические, т.к. размещаются в тематических разделах.</li>
+				<li>Влияние на ссылочное ранжирование – название Вашего сайта, зарегистрированное в каталогах – это ссылка с нужными ключевыми словами.</li>
+			</ul>
+			<h4>Другими словами, <a href="http://1ps.ru/?p=617758" class="text">регистрация в каталогах через 1PS.RU</a> – недорогой способ получения множества ссылок с нужными ключевиками на тематических страницах.</h4>
+			<h4>Основные преимущества 1PS.RU по сравнению с ручной регистрацией – скорость регистрации и ежедневно пополняемые и обновляемые списки каталогов.</h4>
+			
+			
+			<h2 class="list"><a name="list2">Почему с 1PS.RU быстрее?</a></h2>
+			<h4>Потому что 1PS предлагает целую линейку тарифов, выберите оптимальный по затратам времени и денег.</h4>
+			<h4>Любой тариф 1PS экономит Ваше время!</h4>
+			<ul class="indented">
+				<li>Каталоги уже найдены и обработаны, неработающие или работающие нестабильно отключены. Сейчас в базе 12000<!-- <img src="http://company.1ps.ru/identic/numcat.png" border="0" /> --> каталогов.</li>
+				<li>Специалисты Сервиса могут выполнить часть или всю работу за Вас!<br/>
+				Подбор ключевых слов, составление анкеты, выбор рубрик, отправка данных, установка ссылок каталогов и обработка ответов от них – все эти работы выполняются нашими специалистами – выберите удобный Вам тариф!</li>
+			</ul>
+			
+			
+			<h2 class="list"><a name="list3">Почему с 1PS.RU надежнее?</a></h2>
+			<h4>Регистрация выполняется в полуавтоматическом режиме. Это значит, что специалист видит каждый каталог и может скорректировать информацию о сайте под требования каждого каталога, обрабатываются каталоги с регистрацией в несколько этапов и каталоги с капчей!</h4>
+			<h4>Даже при самостоятельной регистрации <b>1PS</b> предупредит Вас о возможных ошибках.</h4>
+			<h4>В подробном отчете Вы увидите результаты отправки данных в КАЖДЫЙ каталог.</h4>
+			<h4>Даже если какой-то каталог не доступен сейчас, Вы сможете позже добавить сайт в него и в новые каталоги.</h4>
+			<h4>При регистрации можно использовать множество вариантов названий и описаний сайта, и тем самым избежать склейки ссылок, а также использовать больше ключевых слов для продвижения!</h4>
+			
+			
+			<h2 class="list"><a name="list4">Сколько стоит регистрация в каталогах через 1PS.RU?</a></h2>
+			<h4>Есть несколько тарифов:</h4>
+			<ul class="indented">
+				<li><b><a href="http://1ps.ru/cost/vip/?p=617758" class="text">vip</a></b> – для занятых людей. Вы предоставляете только URL сайта, ключевые слова и описания для регистрации готовит специалист и согласует с Вами, а после этого зарегистрирует в каталогах. Этот тариф удобен и для новичков – Вы сэкономите массу времени и получите хороший эффект. <br><b>2400 руб.</b> <a href="http://1ps.ru/cost/vip/?p=617758">Подробнее</a></li>
+				<li><b><a href="http://1ps.ru/cost/optima/?p=617758" class="text">оптима</a></b> – если Вы уже выбрали ключевые слова для продвижения, этот тариф оптимален. На их основе специалист готовит описания сайта и регистрирует сайт. <br><b>1560 руб.</b> <a href="http://1ps.ru/cost/optima/?p=617758">Подробнее</a></li>
+				<li><b><a href="http://1ps.ru/cost/elite/?p=617758" class="text">элита</a></b> – описания предоставляете Вы, регистрацию проводит специалист Сервиса 1PS.RU. <br/><b>600 руб.</b> <a href="http://1ps.ru/cost/elite/?p=617758">Подробнее</a></li>
+				<li><b><a href="http://1ps.ru/cost/profy/?p=617758" class="text">профи</a></b> – для профессионалов. Полностью самостоятельная регистрация сайта в каталогах с помощью сервиса 1PS.RU. <br/><b>100 руб.</b> <a href="http://1ps.ru/cost/profy/?p=617758" class="text">Подробнее</a></li>
+			</ul>									
+			<h4>Есть и бесплатный <b><a href="http://1ps.ru/cost/demo/?p=617758" class="text">демо</a></b>-тариф: оцените возможности сервиса для самостоятельной регистрации (50 каталогов доступны в любое время, остальные с 2 до 6 ночи).</h4>
+			<h4><a href="http://go.1ps.ru/pr/?pg=menu_add_req.request&p=617758" class="text">Заказать регистрацию в каталогах</a></h4>
+			
+			
+			<h4 style="display: none;" itemprop="telephone">+7 911 760-65-81</h4>
+			<h4 style="display: none;" itemprop="address">г. Санкт-Петербург, Выборгское шоссе 15</h4>
+
+		</div><!--/content -->
+	</div><!--/main -->
+
+	<div class="clear"></div>
+
+	<div id="footer">
+		<figure class="page_footer">
+			<a href="mailto:partner4345@yandex.ru" title="Связаться по электронной почте" itemprop="email">
+				<span class="mail"></span>
+			</a>
+			
+			<!-- Yandex.Metrika informer -->
+			<!-- <a href="https://metrika.yandex.ru/stat/?id=27807312&amp;from=informer" target="_blank" rel="nofollow" class="counter_left"> -->
+				<!-- <img src="//bs.yandex.ru/informer/27807312/3_0_DBDBDBFF_BBBBBBFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:27807312,lang:'ru'});return false}catch(e){}"/> -->
+			<!-- </a> -->
+			<!-- /Yandex.Metrika informer -->
+		
+			<figtext></figtext>
+			
+			<!-- Rating@Mail.ru logo -->
+			<!-- <a target="_blank" href="http://top.mail.ru/jump?from=2597101" class="counter_right"> -->
+				<!-- <img src="//top-fwz1.mail.ru/counter?id=2597101;t=465;l=1" border="0" height="31" width="88" alt="Рейтинг@Mail.ru"> -->
+			<!-- </a> -->
+			<!-- /Rating@Mail.ru logo -->
+			
+			<a href="skype:ArtDizainProekt?chat" title="Связаться через skype">
+				<span class="skype"></span>
+			</a>
+		</figure>
+	</div><!--/footer -->
+
+	<div class="clear"></div>
+
+	<p id="back-top">
+		<a href="#top"><span></span>Вверх</a>
+	</p>
+	<div id="float_tip"></div>
+
+</body>
+</html>
